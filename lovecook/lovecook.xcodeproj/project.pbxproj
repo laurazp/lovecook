@@ -16,6 +16,8 @@
 		22F507C529A7F59B009653A3 /* lovecookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507C429A7F59B009653A3 /* lovecookTests.swift */; };
 		22F507CF29A7F59B009653A3 /* lovecookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507CE29A7F59B009653A3 /* lovecookUITests.swift */; };
 		22F507D129A7F59B009653A3 /* lovecookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507D029A7F59B009653A3 /* lovecookUITestsLaunchTests.swift */; };
+		22F507DF29A7FE2B009653A3 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507DE29A7FE2B009653A3 /* LogInViewController.swift */; };
+		22F507E229A81359009653A3 /* food_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22F507E129A81359009653A3 /* food_background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		22F507CA29A7F59B009653A3 /* lovecookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lovecookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F507CE29A7F59B009653A3 /* lovecookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lovecookUITests.swift; sourceTree = "<group>"; };
 		22F507D029A7F59B009653A3 /* lovecookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lovecookUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		22F507DE29A7FE2B009653A3 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		22F507E129A81359009653A3 /* food_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = food_background.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		22F507AC29A7F593009653A3 /* lovecook */ = {
 			isa = PBXGroup;
 			children = (
+				22F507E029A8134A009653A3 /* images */,
+				22F507DD29A7FE09009653A3 /* LogIn */,
 				22F507AD29A7F593009653A3 /* AppDelegate.swift */,
 				22F507AF29A7F593009653A3 /* SceneDelegate.swift */,
 				22F507B129A7F593009653A3 /* ViewController.swift */,
@@ -125,6 +131,22 @@
 				22F507D029A7F59B009653A3 /* lovecookUITestsLaunchTests.swift */,
 			);
 			path = lovecookUITests;
+			sourceTree = "<group>";
+		};
+		22F507DD29A7FE09009653A3 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				22F507DE29A7FE2B009653A3 /* LogInViewController.swift */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		22F507E029A8134A009653A3 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				22F507E129A81359009653A3 /* food_background.jpg */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22F507BA29A7F59B009653A3 /* LaunchScreen.storyboard in Resources */,
+				22F507E229A81359009653A3 /* food_background.jpg in Resources */,
 				22F507B729A7F59B009653A3 /* Assets.xcassets in Resources */,
 				22F507B529A7F593009653A3 /* Main.storyboard in Resources */,
 			);
@@ -258,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22F507DF29A7FE2B009653A3 /* LogInViewController.swift in Sources */,
 				22F507B229A7F593009653A3 /* ViewController.swift in Sources */,
 				22F507AE29A7F593009653A3 /* AppDelegate.swift in Sources */,
 				22F507B029A7F593009653A3 /* SceneDelegate.swift in Sources */,
@@ -440,11 +464,12 @@
 				DEVELOPMENT_TEAM = K865WUAKFA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = lovecook/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LoveCook;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,6 +477,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.luridevlabs.lovecook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -468,11 +496,12 @@
 				DEVELOPMENT_TEAM = K865WUAKFA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = lovecook/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LoveCook;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,6 +509,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.luridevlabs.lovecook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

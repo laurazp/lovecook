@@ -1,24 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p7Y-ra-uG5">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Log In View Controller-->
+        <scene sceneID="OYS-iw-pto">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="LogInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="p7Y-ra-uG5" customClass="LogInViewController" customModule="lovecook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pjq-Zi-gI1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food_background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Yel-Fm-RZF">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LoveCook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZ7-Np-Ehn" userLabel="Title Label">
+                                <rect key="frame" x="50" y="79" width="293" height="450"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="450" id="Nfi-6b-SrO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vnd-Nc-B96" userLabel="LogIn Button">
+                                <rect key="frame" x="50" y="559" width="293" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="kNB-VI-0fw"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log In"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account yet?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eg0-Ul-YQC">
+                                <rect key="frame" x="50" y="629" width="293" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ue-Ar-EzR" userLabel="SignIn Button">
+                                <rect key="frame" x="50" y="679.33333333333337" width="293" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7Vg-q7-Rob"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign In"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OVz-zi-BtK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VZ7-Np-Ehn" firstAttribute="leading" secondItem="6Ue-Ar-EzR" secondAttribute="leading" id="DdE-SD-caJ"/>
+                            <constraint firstItem="VZ7-Np-Ehn" firstAttribute="top" secondItem="OVz-zi-BtK" secondAttribute="top" constant="20" id="IQv-Fl-Zxa"/>
+                            <constraint firstItem="Vnd-Nc-B96" firstAttribute="top" secondItem="VZ7-Np-Ehn" secondAttribute="bottom" constant="30" id="JO0-qq-ogJ"/>
+                            <constraint firstItem="Vnd-Nc-B96" firstAttribute="leading" secondItem="OVz-zi-BtK" secondAttribute="leading" constant="50" id="TuY-gE-rja"/>
+                            <constraint firstAttribute="bottom" secondItem="Yel-Fm-RZF" secondAttribute="bottom" id="VvW-5F-LeU"/>
+                            <constraint firstItem="VZ7-Np-Ehn" firstAttribute="trailing" secondItem="6Ue-Ar-EzR" secondAttribute="trailing" id="XvK-ic-L6q"/>
+                            <constraint firstItem="VZ7-Np-Ehn" firstAttribute="trailing" secondItem="Eg0-Ul-YQC" secondAttribute="trailing" id="Y2j-UB-kfe"/>
+                            <constraint firstItem="Yel-Fm-RZF" firstAttribute="leading" secondItem="OVz-zi-BtK" secondAttribute="leading" id="bPl-9D-dl0"/>
+                            <constraint firstItem="Vnd-Nc-B96" firstAttribute="bottom" secondItem="Eg0-Ul-YQC" secondAttribute="top" constant="-30" id="gUj-k2-MUU"/>
+                            <constraint firstItem="6Ue-Ar-EzR" firstAttribute="leading" secondItem="OVz-zi-BtK" secondAttribute="leading" constant="50" id="hQx-IF-pdl"/>
+                            <constraint firstItem="Yel-Fm-RZF" firstAttribute="top" secondItem="Pjq-Zi-gI1" secondAttribute="top" id="iQ3-Lf-0tz"/>
+                            <constraint firstItem="OVz-zi-BtK" firstAttribute="trailing" secondItem="Yel-Fm-RZF" secondAttribute="trailing" id="kwp-2Z-aeZ"/>
+                            <constraint firstItem="Vnd-Nc-B96" firstAttribute="centerX" secondItem="Pjq-Zi-gI1" secondAttribute="centerX" id="ny1-0S-N0H"/>
+                            <constraint firstItem="Eg0-Ul-YQC" firstAttribute="bottom" secondItem="6Ue-Ar-EzR" secondAttribute="top" constant="-30" id="rIn-J2-t1f"/>
+                            <constraint firstItem="VZ7-Np-Ehn" firstAttribute="leading" secondItem="Eg0-Ul-YQC" secondAttribute="leading" id="w45-ji-3Sz"/>
+                            <constraint firstItem="VZ7-Np-Ehn" firstAttribute="centerX" secondItem="Pjq-Zi-gI1" secondAttribute="centerX" id="xtN-2e-SsU"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="Yel-Fm-RZF" id="z0T-TE-SKF"/>
+                        <outlet property="logInButton" destination="Vnd-Nc-B96" id="ZtT-Zh-d1g"/>
+                        <outlet property="signInButton" destination="6Ue-Ar-EzR" id="Kyr-qx-4KB"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uxa-oz-777" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-47" y="-100"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="food_background.jpg" width="3673" height="5207"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
