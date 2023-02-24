@@ -1,11 +1,11 @@
 
 import UIKit
 
-class LogInAndSignInViewController: UIViewController {
+class LogInAndSignUpViewController: UIViewController {
 
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var logInButton: CustomButton!
-    @IBOutlet weak var signInButton: CustomButton!
+    @IBOutlet weak var signUpButton: CustomButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,8 +17,8 @@ class LogInAndSignInViewController: UIViewController {
         
         //Background image
         backgroundImageView.alpha = 0.7
-        //Sign In button
-        signInButton.setUpWhiteButton()
+        //Sign Up button
+        signUpButton.setUpWhiteButton()
     }
 }
 
