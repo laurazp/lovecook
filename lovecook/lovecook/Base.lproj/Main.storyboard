@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Log In View Controller-->
+        <!--Log In And Sign In View Controller-->
         <scene sceneID="OYS-iw-pto">
             <objects>
-                <viewController storyboardIdentifier="LogInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="p7Y-ra-uG5" customClass="LogInViewController" customModule="lovecook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogInAndSignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="p7Y-ra-uG5" customClass="LogInAndSignInViewController" customModule="lovecook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pjq-Zi-gI1">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vnd-Nc-B96" userLabel="LogIn Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vnd-Nc-B96" userLabel="LogIn Button" customClass="CustomButton" customModule="lovecook" customModuleProvider="target">
                                 <rect key="frame" x="50" y="559" width="293" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="kNB-VI-0fw"/>
@@ -42,7 +42,7 @@
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ue-Ar-EzR" userLabel="SignIn Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ue-Ar-EzR" userLabel="SignIn Button" customClass="CustomButton" customModule="lovecook" customModuleProvider="target">
                                 <rect key="frame" x="50" y="679.33333333333337" width="293" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="7Vg-q7-Rob"/>
