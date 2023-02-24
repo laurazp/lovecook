@@ -20,6 +20,7 @@
 		22F507E229A81359009653A3 /* food_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22F507E129A81359009653A3 /* food_background.jpg */; };
 		22F507E529A82962009653A3 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507E429A82962009653A3 /* CustomButton.swift */; };
 		22F507E729A83690009653A3 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507E629A83690009653A3 /* LogInViewController.swift */; };
+		22F507E929A93258009653A3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507E829A93258009653A3 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		22F507E129A81359009653A3 /* food_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = food_background.jpg; sourceTree = "<group>"; };
 		22F507E429A82962009653A3 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		22F507E629A83690009653A3 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		22F507E829A93258009653A3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			children = (
 				22F507DE29A7FE2B009653A3 /* LogInAndSignUpViewController.swift */,
 				22F507E629A83690009653A3 /* LogInViewController.swift */,
+				22F507E829A93258009653A3 /* SignUpViewController.swift */,
 			);
 			path = LogInAndSignUp;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22F507DF29A7FE2B009653A3 /* LogInAndSignUpViewController.swift in Sources */,
+				22F507E929A93258009653A3 /* SignUpViewController.swift in Sources */,
 				22F507B229A7F593009653A3 /* ViewController.swift in Sources */,
 				22F507E729A83690009653A3 /* LogInViewController.swift in Sources */,
 				22F507AE29A7F593009653A3 /* AppDelegate.swift in Sources */,
