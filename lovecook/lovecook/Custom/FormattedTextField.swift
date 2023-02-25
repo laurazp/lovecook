@@ -1,9 +1,3 @@
-//
-//  FormattedTextField.swift
-//  lovecook
-//
-//  Created by Laura Zafra Prat on 25/2/23.
-//
 
 import UIKit
 

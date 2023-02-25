@@ -1,7 +1,7 @@
 
 import UIKit
 
-class LogInAndSignUpViewController: UIViewController {
+class MainPageViewController: UIViewController {
 
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var logInButton: CustomButton!

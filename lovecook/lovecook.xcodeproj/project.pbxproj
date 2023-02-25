@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2250270E29AA39BD003D88EF /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2250270C29AA39BD003D88EF /* TabBar.storyboard */; };
 		22F507AE29A7F593009653A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507AD29A7F593009653A3 /* AppDelegate.swift */; };
 		22F507B029A7F593009653A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507AF29A7F593009653A3 /* SceneDelegate.swift */; };
 		22F507B229A7F593009653A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507B129A7F593009653A3 /* ViewController.swift */; };
@@ -16,7 +17,7 @@
 		22F507C529A7F59B009653A3 /* lovecookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507C429A7F59B009653A3 /* lovecookTests.swift */; };
 		22F507CF29A7F59B009653A3 /* lovecookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507CE29A7F59B009653A3 /* lovecookUITests.swift */; };
 		22F507D129A7F59B009653A3 /* lovecookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507D029A7F59B009653A3 /* lovecookUITestsLaunchTests.swift */; };
-		22F507DF29A7FE2B009653A3 /* LogInAndSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507DE29A7FE2B009653A3 /* LogInAndSignUpViewController.swift */; };
+		22F507DF29A7FE2B009653A3 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507DE29A7FE2B009653A3 /* MainPageViewController.swift */; };
 		22F507E229A81359009653A3 /* food_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22F507E129A81359009653A3 /* food_background.jpg */; };
 		22F507E529A82962009653A3 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507E429A82962009653A3 /* CustomButton.swift */; };
 		22F507E729A83690009653A3 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507E629A83690009653A3 /* LogInViewController.swift */; };
@@ -26,6 +27,7 @@
 		22F507F029A99B9B009653A3 /* RecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507EF29A99B9B009653A3 /* RecipesTableViewController.swift */; };
 		22F507F229A99BB0009653A3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507F129A99BB0009653A3 /* ProfileViewController.swift */; };
 		22F507F429A9A16F009653A3 /* FormattedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507F329A9A16F009653A3 /* FormattedTextField.swift */; };
+		22F507F929AA32E3009653A3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507F829AA32E3009653A3 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2250270D29AA39BD003D88EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = lovecook/Main/Base.lproj/TabBar.storyboard; sourceTree = "<group>"; };
 		22F507AA29A7F593009653A3 /* lovecook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lovecook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F507AD29A7F593009653A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22F507AF29A7F593009653A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +62,7 @@
 		22F507CA29A7F59B009653A3 /* lovecookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lovecookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F507CE29A7F59B009653A3 /* lovecookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lovecookUITests.swift; sourceTree = "<group>"; };
 		22F507D029A7F59B009653A3 /* lovecookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lovecookUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		22F507DE29A7FE2B009653A3 /* LogInAndSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInAndSignUpViewController.swift; sourceTree = "<group>"; };
+		22F507DE29A7FE2B009653A3 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		22F507E129A81359009653A3 /* food_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = food_background.jpg; sourceTree = "<group>"; };
 		22F507E429A82962009653A3 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		22F507E629A83690009653A3 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +72,7 @@
 		22F507EF29A99B9B009653A3 /* RecipesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewController.swift; sourceTree = "<group>"; };
 		22F507F129A99BB0009653A3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		22F507F329A9A16F009653A3 /* FormattedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedTextField.swift; sourceTree = "<group>"; };
+		22F507F829AA32E3009653A3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,12 +125,11 @@
 			children = (
 				22F507EA29A99A6B009653A3 /* TabBar */,
 				22F507E329A8292B009653A3 /* Custom */,
-				22F507E029A8134A009653A3 /* Images */,
-				22F507DD29A7FE09009653A3 /* LogInAndSignUp */,
+				22F507DD29A7FE09009653A3 /* Main */,
 				22F507AD29A7F593009653A3 /* AppDelegate.swift */,
 				22F507AF29A7F593009653A3 /* SceneDelegate.swift */,
 				22F507B129A7F593009653A3 /* ViewController.swift */,
-				22F507B329A7F593009653A3 /* Main.storyboard */,
+				22F507E029A8134A009653A3 /* Images */,
 				22F507B629A7F59B009653A3 /* Assets.xcassets */,
 				22F507B829A7F59B009653A3 /* LaunchScreen.storyboard */,
 				22F507BB29A7F59B009653A3 /* Info.plist */,
@@ -151,14 +154,15 @@
 			path = lovecookUITests;
 			sourceTree = "<group>";
 		};
-		22F507DD29A7FE09009653A3 /* LogInAndSignUp */ = {
+		22F507DD29A7FE09009653A3 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				22F507DE29A7FE2B009653A3 /* LogInAndSignUpViewController.swift */,
+				22F507B329A7F593009653A3 /* Main.storyboard */,
+				22F507DE29A7FE2B009653A3 /* MainPageViewController.swift */,
 				22F507E629A83690009653A3 /* LogInViewController.swift */,
 				22F507E829A93258009653A3 /* SignUpViewController.swift */,
 			);
-			path = LogInAndSignUp;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		22F507E029A8134A009653A3 /* Images */ = {
@@ -181,6 +185,8 @@
 		22F507EA29A99A6B009653A3 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				2250270C29AA39BD003D88EF /* TabBar.storyboard */,
+				22F507F829AA32E3009653A3 /* TabBarController.swift */,
 				22F507EB29A99A85009653A3 /* HomeTableViewController.swift */,
 				22F507ED29A99B40009653A3 /* FavoritesTableViewController.swift */,
 				22F507EF29A99B9B009653A3 /* RecipesTableViewController.swift */,
@@ -293,6 +299,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2250270E29AA39BD003D88EF /* TabBar.storyboard in Resources */,
 				22F507BA29A7F59B009653A3 /* LaunchScreen.storyboard in Resources */,
 				22F507E229A81359009653A3 /* food_background.jpg in Resources */,
 				22F507B729A7F59B009653A3 /* Assets.xcassets in Resources */,
@@ -322,7 +329,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				22F507EC29A99A85009653A3 /* HomeTableViewController.swift in Sources */,
-				22F507DF29A7FE2B009653A3 /* LogInAndSignUpViewController.swift in Sources */,
+				22F507F929AA32E3009653A3 /* TabBarController.swift in Sources */,
+				22F507DF29A7FE2B009653A3 /* MainPageViewController.swift in Sources */,
 				22F507E929A93258009653A3 /* SignUpViewController.swift in Sources */,
 				22F507EE29A99B40009653A3 /* FavoritesTableViewController.swift in Sources */,
 				22F507F029A99B9B009653A3 /* RecipesTableViewController.swift in Sources */,
@@ -369,6 +377,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2250270C29AA39BD003D88EF /* TabBar.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2250270D29AA39BD003D88EF /* Base */,
+			);
+			name = TabBar.storyboard;
+			sourceTree = "<group>";
+		};
 		22F507B329A7F593009653A3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
