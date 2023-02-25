@@ -21,6 +21,10 @@
 		22F507E529A82962009653A3 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507E429A82962009653A3 /* CustomButton.swift */; };
 		22F507E729A83690009653A3 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507E629A83690009653A3 /* LogInViewController.swift */; };
 		22F507E929A93258009653A3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507E829A93258009653A3 /* SignUpViewController.swift */; };
+		22F507EC29A99A85009653A3 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507EB29A99A85009653A3 /* HomeTableViewController.swift */; };
+		22F507EE29A99B40009653A3 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507ED29A99B40009653A3 /* FavoritesTableViewController.swift */; };
+		22F507F029A99B9B009653A3 /* RecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507EF29A99B9B009653A3 /* RecipesTableViewController.swift */; };
+		22F507F229A99BB0009653A3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507F129A99BB0009653A3 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		22F507E429A82962009653A3 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		22F507E629A83690009653A3 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		22F507E829A93258009653A3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		22F507EB29A99A85009653A3 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		22F507ED29A99B40009653A3 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
+		22F507EF29A99B9B009653A3 /* RecipesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewController.swift; sourceTree = "<group>"; };
+		22F507F129A99BB0009653A3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,7 @@
 		22F507AC29A7F593009653A3 /* lovecook */ = {
 			isa = PBXGroup;
 			children = (
+				22F507EA29A99A6B009653A3 /* TabBar */,
 				22F507E329A8292B009653A3 /* Custom */,
 				22F507E029A8134A009653A3 /* Images */,
 				22F507DD29A7FE09009653A3 /* LogInAndSignUp */,
@@ -164,6 +173,17 @@
 				22F507E429A82962009653A3 /* CustomButton.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		22F507EA29A99A6B009653A3 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				22F507EB29A99A85009653A3 /* HomeTableViewController.swift */,
+				22F507ED29A99B40009653A3 /* FavoritesTableViewController.swift */,
+				22F507EF29A99B9B009653A3 /* RecipesTableViewController.swift */,
+				22F507F129A99BB0009653A3 /* ProfileViewController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,9 +318,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22F507EC29A99A85009653A3 /* HomeTableViewController.swift in Sources */,
 				22F507DF29A7FE2B009653A3 /* LogInAndSignUpViewController.swift in Sources */,
 				22F507E929A93258009653A3 /* SignUpViewController.swift in Sources */,
+				22F507EE29A99B40009653A3 /* FavoritesTableViewController.swift in Sources */,
+				22F507F029A99B9B009653A3 /* RecipesTableViewController.swift in Sources */,
 				22F507B229A7F593009653A3 /* ViewController.swift in Sources */,
+				22F507F229A99BB0009653A3 /* ProfileViewController.swift in Sources */,
 				22F507E729A83690009653A3 /* LogInViewController.swift in Sources */,
 				22F507AE29A7F593009653A3 /* AppDelegate.swift in Sources */,
 				22F507B029A7F593009653A3 /* SceneDelegate.swift in Sources */,
