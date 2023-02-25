@@ -24,9 +24,11 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="Nfi-6b-SrO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="50"/>
+                                <color key="textColor" systemColor="systemGray5Color"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="-2"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vnd-Nc-B96" userLabel="LogIn Button" customClass="CustomButton" customModule="lovecook" customModuleProvider="target">
                                 <rect key="frame" x="50" y="573" width="293" height="40"/>
@@ -34,24 +36,28 @@
                                     <constraint firstAttribute="height" constant="40" id="kNB-VI-0fw"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Log In"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log In">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="S4v-HQ-Dhk" kind="show" id="ePG-8b-653"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account yet?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eg0-Ul-YQC">
-                                <rect key="frame" x="50" y="643" width="293" height="20.333333333333371"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="50" y="643" width="293" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" systemColor="systemGray5Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ue-Ar-EzR" userLabel="SignUp Button" customClass="CustomButton" customModule="lovecook" customModuleProvider="target">
-                                <rect key="frame" x="50" y="683.33333333333337" width="293" height="40"/>
+                                <rect key="frame" x="50" y="681" width="293" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="7Vg-q7-Rob"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign Up">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="IoA-R3-bxt" kind="show" id="wWb-IN-Z3J"/>
                                 </connections>
@@ -97,24 +103,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOG IN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbH-3y-S6r">
-                                <rect key="frame" x="152.66666666666666" y="268" width="88" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME BACK!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbH-3y-S6r">
+                                <rect key="frame" x="84.666666666666686" y="268" width="224" height="33"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good to see you again!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOa-VN-uyR">
-                                <rect key="frame" x="109" y="311" width="175" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in to your account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOa-VN-uyR">
+                                <rect key="frame" x="112.00000000000001" y="311" width="169.33333333333337" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4DD-RT-WDm" customClass="FormattedTextField" customModule="lovecook" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4DD-RT-WDm" customClass="StyledTextField" customModule="lovecook" customModuleProvider="target">
                                 <rect key="frame" x="50" y="407" width="293" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1G6-QQ-2QY" customClass="FormattedTextField" customModule="lovecook" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1G6-QQ-2QY" customClass="StyledTextField" customModule="lovecook" customModuleProvider="target">
                                 <rect key="frame" x="50" y="471" width="293" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
@@ -174,34 +180,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGN UP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNw-U6-fSv">
-                                <rect key="frame" x="143" y="268" width="107" height="33"/>
+                                <rect key="frame" x="143" y="268" width="107" height="32.333333333333314"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to LoveCook!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ou-Dy-wqC">
-                                <rect key="frame" x="109.00000000000001" y="311" width="175.33333333333337" height="20.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks for joining us!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ou-Dy-wqC">
+                                <rect key="frame" x="115.66666666666669" y="310.33333333333331" width="162" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aT4-jT-OIv" customClass="FormattedTextField" customModule="lovecook" customModuleProvider="target">
-                                <rect key="frame" x="50" y="406.33333333333331" width="293" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aT4-jT-OIv" customClass="StyledTextField" customModule="lovecook" customModuleProvider="target">
+                                <rect key="frame" x="50" y="405.66666666666669" width="293" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vAm-23-Oyb" customClass="FormattedTextField" customModule="lovecook" customModuleProvider="target">
-                                <rect key="frame" x="50" y="470.33333333333331" width="293" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vAm-23-Oyb" customClass="StyledTextField" customModule="lovecook" customModuleProvider="target">
+                                <rect key="frame" x="50" y="469.66666666666669" width="293" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose Your Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Xn-8q-nKj" customClass="FormattedTextField" customModule="lovecook" customModuleProvider="target">
-                                <rect key="frame" x="50" y="534.33333333333337" width="293" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose Your Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Xn-8q-nKj" customClass="StyledTextField" customModule="lovecook" customModuleProvider="target">
+                                <rect key="frame" x="50" y="533.66666666666663" width="293" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GqC-7A-SyG" userLabel="Terms Stack View">
+                                <rect key="frame" x="40" y="577.66666666666663" width="303" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Uc-EL-4QU" userLabel="Checkbox Button" customClass="Checkbox" customModule="lovecook" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="39" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="square" catalog="system"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="I have read and agree to the Terms and Conditions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIA-Wx-1V8">
+                                        <rect key="frame" x="39" y="0.0" width="264" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" systemColor="systemGray2Color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GPF-NP-0tq"/>
+                                </constraints>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5C0-47-Cm5" customClass="CustomButton" customModule="lovecook" customModuleProvider="target">
-                                <rect key="frame" x="50" y="618.33333333333337" width="293" height="35"/>
+                                <rect key="frame" x="50" y="657.66666666666663" width="293" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
                                 <connections>
@@ -218,12 +243,15 @@
                             <constraint firstItem="5C0-47-Cm5" firstAttribute="leading" secondItem="KYX-a1-mqQ" secondAttribute="leading" constant="50" id="AJA-41-jHT"/>
                             <constraint firstItem="wNw-U6-fSv" firstAttribute="centerX" secondItem="Q8O-47-tD6" secondAttribute="centerX" id="Eo5-tc-AYb"/>
                             <constraint firstItem="5Xn-8q-nKj" firstAttribute="top" secondItem="vAm-23-Oyb" secondAttribute="bottom" constant="30" id="GJj-7Z-XHG"/>
-                            <constraint firstItem="5C0-47-Cm5" firstAttribute="top" secondItem="5Xn-8q-nKj" secondAttribute="bottom" constant="50" id="JSu-qb-qSh"/>
+                            <constraint firstItem="5C0-47-Cm5" firstAttribute="top" secondItem="GqC-7A-SyG" secondAttribute="bottom" constant="30" id="JSu-qb-qSh"/>
                             <constraint firstItem="aT4-jT-OIv" firstAttribute="top" secondItem="7Ou-Dy-wqC" secondAttribute="bottom" constant="75" id="Lu6-rG-yRJ"/>
                             <constraint firstItem="5Xn-8q-nKj" firstAttribute="leading" secondItem="KYX-a1-mqQ" secondAttribute="leading" constant="50" id="R07-bR-YCP"/>
                             <constraint firstItem="vAm-23-Oyb" firstAttribute="top" secondItem="aT4-jT-OIv" secondAttribute="bottom" constant="30" id="Rvc-wa-jOM"/>
                             <constraint firstItem="KYX-a1-mqQ" firstAttribute="trailing" secondItem="5C0-47-Cm5" secondAttribute="trailing" constant="50" id="UYn-jX-KA8"/>
+                            <constraint firstItem="KYX-a1-mqQ" firstAttribute="trailing" secondItem="GqC-7A-SyG" secondAttribute="trailing" constant="50" id="VKb-tx-l4c"/>
                             <constraint firstItem="KYX-a1-mqQ" firstAttribute="trailing" secondItem="5Xn-8q-nKj" secondAttribute="trailing" constant="50" id="Xyz-rv-wgS"/>
+                            <constraint firstItem="GqC-7A-SyG" firstAttribute="leading" secondItem="KYX-a1-mqQ" secondAttribute="leading" constant="40" id="bDO-Zj-ytk"/>
+                            <constraint firstItem="GqC-7A-SyG" firstAttribute="top" secondItem="5Xn-8q-nKj" secondAttribute="bottom" constant="10" id="c7S-p3-b4l"/>
                             <constraint firstItem="KYX-a1-mqQ" firstAttribute="trailing" secondItem="vAm-23-Oyb" secondAttribute="trailing" constant="50" id="fgl-qV-oTk"/>
                             <constraint firstItem="7Ou-Dy-wqC" firstAttribute="top" secondItem="wNw-U6-fSv" secondAttribute="bottom" constant="10" id="hg2-VV-dbw"/>
                             <constraint firstItem="vAm-23-Oyb" firstAttribute="leading" secondItem="KYX-a1-mqQ" secondAttribute="leading" constant="50" id="l8k-fQ-DRQ"/>
@@ -270,8 +298,15 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="food_background.jpg" width="3673" height="5207"/>
+        <image name="square" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

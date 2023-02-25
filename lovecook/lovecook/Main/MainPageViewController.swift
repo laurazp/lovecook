@@ -16,9 +16,12 @@ class MainPageViewController: UIViewController {
     private func setUpView() {
         
         //Background image
-        backgroundImageView.alpha = 0.7
+        backgroundImageView.alpha = 0.8
         //Sign Up button
-        signUpButton.setUpWhiteButton()
+        signUpButton.setUpWhiteButtonWithBorder()
+        
+        //logInButton.setButtonFont(button: logInButton, title: "Log In")
+        //signUpButton.setButtonFont(button: signUpButton, title: "Sign Up")
     }
 }
 
