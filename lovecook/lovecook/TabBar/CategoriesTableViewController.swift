@@ -1,7 +1,7 @@
 
 import UIKit
 
-class HomeTableViewController: UITableViewController {
+class CategoriesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

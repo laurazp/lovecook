@@ -25,8 +25,8 @@
 		22F507E929A93258009653A3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507E829A93258009653A3 /* SignUpViewController.swift */; };
 		22F507EC29A99A85009653A3 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507EB29A99A85009653A3 /* HomeTableViewController.swift */; };
 		22F507EE29A99B40009653A3 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507ED29A99B40009653A3 /* FavoritesTableViewController.swift */; };
-		22F507F029A99B9B009653A3 /* RecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507EF29A99B9B009653A3 /* RecipesTableViewController.swift */; };
-		22F507F229A99BB0009653A3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507F129A99BB0009653A3 /* ProfileViewController.swift */; };
+		22F507F029A99B9B009653A3 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507EF29A99B9B009653A3 /* CategoriesTableViewController.swift */; };
+		22F507F229A99BB0009653A3 /* MyRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507F129A99BB0009653A3 /* MyRecipesViewController.swift */; };
 		22F507F429A9A16F009653A3 /* StyledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507F329A9A16F009653A3 /* StyledTextField.swift */; };
 		22F507F929AA32E3009653A3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507F829AA32E3009653A3 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
@@ -71,8 +71,8 @@
 		22F507E829A93258009653A3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		22F507EB29A99A85009653A3 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		22F507ED29A99B40009653A3 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
-		22F507EF29A99B9B009653A3 /* RecipesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewController.swift; sourceTree = "<group>"; };
-		22F507F129A99BB0009653A3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		22F507EF29A99B9B009653A3 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
+		22F507F129A99BB0009653A3 /* MyRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecipesViewController.swift; sourceTree = "<group>"; };
 		22F507F329A9A16F009653A3 /* StyledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledTextField.swift; sourceTree = "<group>"; };
 		22F507F829AA32E3009653A3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2250271129AA987B003D88EF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				22F507EB29A99A85009653A3 /* HomeTableViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		22F507A129A7F593009653A3 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +133,7 @@
 		22F507AC29A7F593009653A3 /* lovecook */ = {
 			isa = PBXGroup;
 			children = (
+				2250271129AA987B003D88EF /* Home */,
 				22F507EA29A99A6B009653A3 /* TabBar */,
 				22F507E329A8292B009653A3 /* CustomElements */,
 				22F507DD29A7FE09009653A3 /* Main */,
@@ -190,10 +199,9 @@
 			children = (
 				2250270C29AA39BD003D88EF /* TabBar.storyboard */,
 				22F507F829AA32E3009653A3 /* TabBarController.swift */,
-				22F507EB29A99A85009653A3 /* HomeTableViewController.swift */,
 				22F507ED29A99B40009653A3 /* FavoritesTableViewController.swift */,
-				22F507EF29A99B9B009653A3 /* RecipesTableViewController.swift */,
-				22F507F129A99BB0009653A3 /* ProfileViewController.swift */,
+				22F507EF29A99B9B009653A3 /* CategoriesTableViewController.swift */,
+				22F507F129A99BB0009653A3 /* MyRecipesViewController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -337,10 +345,10 @@
 				22F507E929A93258009653A3 /* SignUpViewController.swift in Sources */,
 				2250271029AA8B6C003D88EF /* Checkbox.swift in Sources */,
 				22F507EE29A99B40009653A3 /* FavoritesTableViewController.swift in Sources */,
-				22F507F029A99B9B009653A3 /* RecipesTableViewController.swift in Sources */,
+				22F507F029A99B9B009653A3 /* CategoriesTableViewController.swift in Sources */,
 				22F507B229A7F593009653A3 /* ViewController.swift in Sources */,
 				22F507F429A9A16F009653A3 /* StyledTextField.swift in Sources */,
-				22F507F229A99BB0009653A3 /* ProfileViewController.swift in Sources */,
+				22F507F229A99BB0009653A3 /* MyRecipesViewController.swift in Sources */,
 				22F507E729A83690009653A3 /* LogInViewController.swift in Sources */,
 				22F507AE29A7F593009653A3 /* AppDelegate.swift in Sources */,
 				22F507B029A7F593009653A3 /* SceneDelegate.swift in Sources */,

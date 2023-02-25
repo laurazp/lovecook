@@ -1,7 +1,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class MyRecipesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -11,7 +11,7 @@
         <!--My Recipes-->
         <scene sceneID="tG5-DN-7uW">
             <objects>
-                <viewController id="9CO-uG-kYV" customClass="ProfileViewController" customModule="lovecook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9CO-uG-kYV" customClass="MyRecipesViewController" customModule="lovecook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mZ6-bR-Wb8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,10 +82,10 @@
             </objects>
             <point key="canvasLocation" x="685" y="2508"/>
         </scene>
-        <!--Recipes Table View Controller-->
+        <!--Categories Table View Controller-->
         <scene sceneID="WRF-of-lZP">
             <objects>
-                <tableViewController id="A6j-Qw-RR9" customClass="RecipesTableViewController" customModule="lovecook" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="A6j-Qw-RR9" customClass="CategoriesTableViewController" customModule="lovecook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="GHj-oT-pcK">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
