@@ -1,7 +1,7 @@
 
 import UIKit
 
-class FormattedTextField: UITextField {
+class StyledTextField: UITextField {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -15,7 +15,7 @@ class FormattedTextField: UITextField {
     
     func defaultSetUp() {
         layer.borderWidth = 1
-        layer.borderColor = UIColor.lightGray.cgColor
+        layer.borderColor = UIColor.systemGray3.cgColor
         layer.cornerRadius = 5
     }
 
