@@ -25,6 +25,7 @@
 		22F507EE29A99B40009653A3 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507ED29A99B40009653A3 /* FavoritesTableViewController.swift */; };
 		22F507F029A99B9B009653A3 /* RecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507EF29A99B9B009653A3 /* RecipesTableViewController.swift */; };
 		22F507F229A99BB0009653A3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507F129A99BB0009653A3 /* ProfileViewController.swift */; };
+		22F507F429A9A16F009653A3 /* FormattedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507F329A9A16F009653A3 /* FormattedTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		22F507ED29A99B40009653A3 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		22F507EF29A99B9B009653A3 /* RecipesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewController.swift; sourceTree = "<group>"; };
 		22F507F129A99BB0009653A3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		22F507F329A9A16F009653A3 /* FormattedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				22F507E429A82962009653A3 /* CustomButton.swift */,
+				22F507F329A9A16F009653A3 /* FormattedTextField.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				22F507EE29A99B40009653A3 /* FavoritesTableViewController.swift in Sources */,
 				22F507F029A99B9B009653A3 /* RecipesTableViewController.swift in Sources */,
 				22F507B229A7F593009653A3 /* ViewController.swift in Sources */,
+				22F507F429A9A16F009653A3 /* FormattedTextField.swift in Sources */,
 				22F507F229A99BB0009653A3 /* ProfileViewController.swift in Sources */,
 				22F507E729A83690009653A3 /* LogInViewController.swift in Sources */,
 				22F507AE29A7F593009653A3 /* AppDelegate.swift in Sources */,

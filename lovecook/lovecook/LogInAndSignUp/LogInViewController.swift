@@ -8,13 +8,6 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpProperties()
     }
     
-    func setUpProperties() {
-        emailTextField.layer.borderWidth = 1
-        emailTextField.layer.borderColor = UIColor.lightGray.cgColor
-        passwordTextField.layer.borderWidth = 1
-        passwordTextField.layer.borderColor = UIColor.lightGray.cgColor
-    }
 }

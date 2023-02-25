@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f9D-Ip-c5T">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hbr-0b-esr">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -20,16 +20,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LoveCook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZ7-Np-Ehn" userLabel="Title Label">
-                                <rect key="frame" x="50" y="123" width="293" height="450"/>
+                                <rect key="frame" x="50" y="123" width="293" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="450" id="Nfi-6b-SrO"/>
+                                    <constraint firstAttribute="height" constant="250" id="Nfi-6b-SrO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vnd-Nc-B96" userLabel="LogIn Button" customClass="CustomButton" customModule="lovecook" customModuleProvider="target">
-                                <rect key="frame" x="50" y="603" width="293" height="40"/>
+                                <rect key="frame" x="50" y="573" width="293" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="kNB-VI-0fw"/>
                                 </constraints>
@@ -40,13 +40,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account yet?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eg0-Ul-YQC">
-                                <rect key="frame" x="50" y="673" width="293" height="20.333333333333371"/>
+                                <rect key="frame" x="50" y="643" width="293" height="20.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ue-Ar-EzR" userLabel="SignUp Button" customClass="CustomButton" customModule="lovecook" customModuleProvider="target">
-                                <rect key="frame" x="50" y="723.33333333333337" width="293" height="40"/>
+                                <rect key="frame" x="50" y="683.33333333333337" width="293" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="7Vg-q7-Rob"/>
                                 </constraints>
@@ -62,7 +62,7 @@
                         <constraints>
                             <constraint firstItem="VZ7-Np-Ehn" firstAttribute="leading" secondItem="6Ue-Ar-EzR" secondAttribute="leading" id="DdE-SD-caJ"/>
                             <constraint firstItem="VZ7-Np-Ehn" firstAttribute="top" secondItem="OVz-zi-BtK" secondAttribute="top" constant="20" id="IQv-Fl-Zxa"/>
-                            <constraint firstItem="Vnd-Nc-B96" firstAttribute="top" secondItem="VZ7-Np-Ehn" secondAttribute="bottom" constant="30" id="JO0-qq-ogJ"/>
+                            <constraint firstItem="Vnd-Nc-B96" firstAttribute="top" secondItem="VZ7-Np-Ehn" secondAttribute="bottom" constant="200" id="JO0-qq-ogJ"/>
                             <constraint firstItem="Vnd-Nc-B96" firstAttribute="leading" secondItem="OVz-zi-BtK" secondAttribute="leading" constant="50" id="TuY-gE-rja"/>
                             <constraint firstAttribute="bottom" secondItem="Yel-Fm-RZF" secondAttribute="bottom" id="VvW-5F-LeU"/>
                             <constraint firstItem="VZ7-Np-Ehn" firstAttribute="trailing" secondItem="6Ue-Ar-EzR" secondAttribute="trailing" id="XvK-ic-L6q"/>
@@ -73,7 +73,7 @@
                             <constraint firstItem="Yel-Fm-RZF" firstAttribute="top" secondItem="Pjq-Zi-gI1" secondAttribute="top" id="iQ3-Lf-0tz"/>
                             <constraint firstItem="OVz-zi-BtK" firstAttribute="trailing" secondItem="Yel-Fm-RZF" secondAttribute="trailing" id="kwp-2Z-aeZ"/>
                             <constraint firstItem="Vnd-Nc-B96" firstAttribute="centerX" secondItem="Pjq-Zi-gI1" secondAttribute="centerX" id="ny1-0S-N0H"/>
-                            <constraint firstItem="Eg0-Ul-YQC" firstAttribute="bottom" secondItem="6Ue-Ar-EzR" secondAttribute="top" constant="-30" id="rIn-J2-t1f"/>
+                            <constraint firstItem="Eg0-Ul-YQC" firstAttribute="bottom" secondItem="6Ue-Ar-EzR" secondAttribute="top" constant="-20" id="rIn-J2-t1f"/>
                             <constraint firstItem="VZ7-Np-Ehn" firstAttribute="leading" secondItem="Eg0-Ul-YQC" secondAttribute="leading" id="w45-ji-3Sz"/>
                             <constraint firstItem="VZ7-Np-Ehn" firstAttribute="centerX" secondItem="Pjq-Zi-gI1" secondAttribute="centerX" id="xtN-2e-SsU"/>
                         </constraints>
@@ -233,12 +233,12 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4DD-RT-WDm">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4DD-RT-WDm" customClass="FormattedTextField" customModule="lovecook" customModuleProvider="target">
                                 <rect key="frame" x="50" y="407" width="293" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1G6-QQ-2QY">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1G6-QQ-2QY" customClass="FormattedTextField" customModule="lovecook" customModuleProvider="target">
                                 <rect key="frame" x="50" y="471" width="293" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
@@ -249,8 +249,8 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Log In"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot your password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yaj-qB-Bed">
-                                <rect key="frame" x="109.66666666666669" y="620" width="174" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="118.33333333333333" y="620" width="156.66666666666669" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -306,17 +306,17 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aT4-jT-OIv">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aT4-jT-OIv" customClass="FormattedTextField" customModule="lovecook" customModuleProvider="target">
                                 <rect key="frame" x="50" y="406.33333333333331" width="293" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vAm-23-Oyb">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vAm-23-Oyb" customClass="FormattedTextField" customModule="lovecook" customModuleProvider="target">
                                 <rect key="frame" x="50" y="470.33333333333331" width="293" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose Your Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Xn-8q-nKj">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose Your Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Xn-8q-nKj" customClass="FormattedTextField" customModule="lovecook" customModuleProvider="target">
                                 <rect key="frame" x="50" y="534.33333333333337" width="293" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
