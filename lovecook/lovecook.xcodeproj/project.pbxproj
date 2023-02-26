@@ -14,6 +14,12 @@
 		228219BE29AAC8D700DF704F /* CategoriesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228219BC29AAC8D700DF704F /* CategoriesStoryboard.storyboard */; };
 		228219C129AAC93300DF704F /* FavoritesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228219C029AAC93300DF704F /* FavoritesStoryboard.storyboard */; };
 		228219C529AAC99E00DF704F /* MyRecipesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228219C329AAC99E00DF704F /* MyRecipesStoryboard.storyboard */; };
+		228219C929AACC3B00DF704F /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228219C729AACC3B00DF704F /* CategoriesCell.swift */; };
+		228219CA29AACC3B00DF704F /* CategoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228219C829AACC3B00DF704F /* CategoriesCell.xib */; };
+		228219CE29AACF6D00DF704F /* FoodApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228219CD29AACF6D00DF704F /* FoodApiDataSource.swift */; };
+		228219D029AACF7E00DF704F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228219CF29AACF7E00DF704F /* Category.swift */; };
+		228219D229AACFF600DF704F /* CategoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228219D129AACFF600DF704F /* CategoriesResponse.swift */; };
+		228219D429AAD24000DF704F /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228219D329AAD24000DF704F /* CategoriesViewModel.swift */; };
 		22F507AE29A7F593009653A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507AD29A7F593009653A3 /* AppDelegate.swift */; };
 		22F507B029A7F593009653A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507AF29A7F593009653A3 /* SceneDelegate.swift */; };
 		22F507B229A7F593009653A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507B129A7F593009653A3 /* ViewController.swift */; };
@@ -60,6 +66,12 @@
 		228219BD29AAC8D700DF704F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = lovecook/TabBar/lovecook/Main/Base.lproj/CategoriesStoryboard.storyboard; sourceTree = "<group>"; };
 		228219C029AAC93300DF704F /* FavoritesStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FavoritesStoryboard.storyboard; sourceTree = "<group>"; };
 		228219C429AAC99E00DF704F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = lovecook/TabBar/lovecook/Main/Base.lproj/MyRecipesStoryboard.storyboard; sourceTree = "<group>"; };
+		228219C729AACC3B00DF704F /* CategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCell.swift; sourceTree = "<group>"; };
+		228219C829AACC3B00DF704F /* CategoriesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCell.xib; sourceTree = "<group>"; };
+		228219CD29AACF6D00DF704F /* FoodApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodApiDataSource.swift; sourceTree = "<group>"; };
+		228219CF29AACF7E00DF704F /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		228219D129AACFF600DF704F /* CategoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesResponse.swift; sourceTree = "<group>"; };
+		228219D329AAD24000DF704F /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		22F507AA29A7F593009653A3 /* lovecook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lovecook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F507AD29A7F593009653A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22F507AF29A7F593009653A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +138,8 @@
 			children = (
 				228219BC29AAC8D700DF704F /* CategoriesStoryboard.storyboard */,
 				22F507EF29A99B9B009653A3 /* CategoriesTableViewController.swift */,
+				228219D529AAD24500DF704F /* ViewModel */,
+				228219C629AACBC900DF704F /* Cells */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -146,6 +160,41 @@
 				22F507F129A99BB0009653A3 /* MyRecipesViewController.swift */,
 			);
 			path = MyRecipes;
+			sourceTree = "<group>";
+		};
+		228219C629AACBC900DF704F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				228219C829AACC3B00DF704F /* CategoriesCell.xib */,
+				228219C729AACC3B00DF704F /* CategoriesCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		228219CB29AACF2700DF704F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				228219CC29AACF2F00DF704F /* Models */,
+				228219CD29AACF6D00DF704F /* FoodApiDataSource.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		228219CC29AACF2F00DF704F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				228219CF29AACF7E00DF704F /* Category.swift */,
+				228219D129AACFF600DF704F /* CategoriesResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		228219D529AAD24500DF704F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				228219D329AAD24000DF704F /* CategoriesViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		22F507A129A7F593009653A3 = {
@@ -171,6 +220,7 @@
 		22F507AC29A7F593009653A3 /* lovecook */ = {
 			isa = PBXGroup;
 			children = (
+				228219CB29AACF2700DF704F /* API */,
 				228219C229AAC97800DF704F /* MyRecipes */,
 				228219BF29AAC90A00DF704F /* Favorites */,
 				2250271129AA987B003D88EF /* Home */,
@@ -359,6 +409,7 @@
 				22F507BA29A7F59B009653A3 /* LaunchScreen.storyboard in Resources */,
 				228219BE29AAC8D700DF704F /* CategoriesStoryboard.storyboard in Resources */,
 				228219BA29AAC85F00DF704F /* HomeStoryboard.storyboard in Resources */,
+				228219CA29AACC3B00DF704F /* CategoriesCell.xib in Resources */,
 				22F507E229A81359009653A3 /* food_background.jpg in Resources */,
 				22F507B729A7F59B009653A3 /* Assets.xcassets in Resources */,
 				228219C529AAC99E00DF704F /* MyRecipesStoryboard.storyboard in Resources */,
@@ -387,6 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				228219C929AACC3B00DF704F /* CategoriesCell.swift in Sources */,
 				22F507EC29A99A85009653A3 /* HomeTableViewController.swift in Sources */,
 				22F507F929AA32E3009653A3 /* TabBarController.swift in Sources */,
 				22F507DF29A7FE2B009653A3 /* MainPageViewController.swift in Sources */,
@@ -397,10 +449,14 @@
 				22F507B229A7F593009653A3 /* ViewController.swift in Sources */,
 				22F507F429A9A16F009653A3 /* StyledTextField.swift in Sources */,
 				22F507F229A99BB0009653A3 /* MyRecipesViewController.swift in Sources */,
+				228219D429AAD24000DF704F /* CategoriesViewModel.swift in Sources */,
+				228219D029AACF7E00DF704F /* Category.swift in Sources */,
+				228219D229AACFF600DF704F /* CategoriesResponse.swift in Sources */,
 				22F507E729A83690009653A3 /* LogInViewController.swift in Sources */,
 				22F507AE29A7F593009653A3 /* AppDelegate.swift in Sources */,
 				22F507B029A7F593009653A3 /* SceneDelegate.swift in Sources */,
 				22F507E529A82962009653A3 /* CustomButton.swift in Sources */,
+				228219CE29AACF6D00DF704F /* FoodApiDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
