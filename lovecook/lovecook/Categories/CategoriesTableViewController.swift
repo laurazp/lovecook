@@ -3,72 +3,78 @@ import UIKit
 
 class CategoriesTableViewController: UITableViewController {
 
+    
+    //@IBOutlet var categoriesTableView: UITableView!
+    let viewModel = CategoriesViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        title = "Categories"
+        tableView.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
+        //setupTable()
+        viewModel.viewDidLoad()
     }
-
+    
+    // MARK: - View Model Output
+    func updateView() {
+        tableView.reloadData()
+    }
+    
+    private func setupTable() {
+        tableView.register(UINib(nibName: "CategoriesCell", bundle: nil), forCellReuseIdentifier: "CategoriesCell")
+//        categoriesTableView.delegate = self
+//        categoriesTableView.dataSource = self
+//        categoriesTableView.rowHeight = UITableView.automaticDimension
+//        //categoriesTableView.estimatedRowHeight = 90
+//        definesPresentationContext = true
+        print("Table setup done")
+    }
+    
+    func configureCell(cell: CategoriesCell, indexPath: IndexPath) {
+        let category = viewModel.getCategory(at: indexPath.row)
+        
+        print(category.strCategory)
+        //TODO: Assign title and image when cell is ready
+        cell.categoryTitleLabel.text = category.strCategory
+        //cell.categoryImage = UIImageView(image: UIImage(named: "xmark"))
+        //TODO: cell.categoryImage = UIImageView(image: UIImage(named: "xmark"))
+        //cell.image = strCategoryThumb --> es el string de una url !
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return viewModel.numberOfItems()
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        print("inside cellforrowat")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesCell", for: indexPath) as? CategoriesCell else { return UITableViewCell() }
+        // TODO: Configure the cell...
+        configureCell(cell: cell, indexPath: indexPath)
+        cell.indexPath = indexPath
+        //cell.delegate = self
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Choose a Category"
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 30
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //TODO: implement this
+        
+        
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     /*
     // MARK: - Navigation
