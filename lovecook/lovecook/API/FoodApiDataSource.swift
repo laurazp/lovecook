@@ -1,8 +1,6 @@
 
 import Foundation
 
-typealias GetCategoriesResult = ([Category]) -> ()
-
 class FoodApiDataSource {
     
     func getCategoriesData(url: URL, completion: @escaping ([Category]?)-> ()) {

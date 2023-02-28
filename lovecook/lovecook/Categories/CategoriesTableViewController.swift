@@ -8,11 +8,13 @@ class CategoriesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //TODO: Hide Back item !!
+        title = "Categories"
         setupTable()
     }
     
     private func setupTable() {
-//        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.prefersLargeTitles = true
 //        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemOrange]
         
         let url = URL(string: "https://www.themealdb.com/api/json/v1/1/categories.php")!
@@ -40,7 +42,8 @@ class CategoriesTableViewController: UITableViewController {
         let category = self.categoriesViewModel.categoryAtIndex(indexPath.row)
         cell.categoryTitleLabel.text = category.title
         //cell.categoryImage = UIImageView(image: UIImage(imageLiteralResourceName: category.image))
-        //cell.categoryImage = category.image
+        let imageUrl = URL(string: category.image)!
+        cell.categoryImage.load(url: imageUrl)
         return cell
     }
     
@@ -48,6 +51,10 @@ class CategoriesTableViewController: UITableViewController {
         //TODO: Implement (open url in navigator?)
     }
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Choose a Category"
+    }
+        
     
 //    let viewModel = CategoriesViewModel()
 //
@@ -135,14 +142,18 @@ class CategoriesTableViewController: UITableViewController {
 //
 //    }
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
     }
-    */
-
 }
