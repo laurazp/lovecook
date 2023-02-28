@@ -15,9 +15,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CategoriesCell" rowHeight="90" id="JNM-Jk-RVO" customClass="CategoriesCell" customModule="lovecook" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JNM-Jk-RVO" id="YXE-NU-4lX">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="xPI-WY-HUr">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Zy-HC-vXs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="334.66666666666669" height="90"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yD4-OQ-WYj">
+                                                    <rect key="frame" x="351.66666666666669" y="35" width="41.333333333333314" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="xPI-WY-HUr" firstAttribute="leading" secondItem="YXE-NU-4lX" secondAttribute="leading" id="6GD-8I-zPD"/>
+                                        <constraint firstAttribute="trailing" secondItem="xPI-WY-HUr" secondAttribute="trailing" id="S4M-fb-7hz"/>
+                                        <constraint firstItem="xPI-WY-HUr" firstAttribute="top" secondItem="YXE-NU-4lX" secondAttribute="top" id="m8F-Hg-dLw"/>
+                                        <constraint firstAttribute="bottom" secondItem="xPI-WY-HUr" secondAttribute="bottom" id="s9T-2a-tMJ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="categoryImage" destination="3Zy-HC-vXs" id="j4Q-U4-6pD"/>
+                                    <outlet property="categoryTitleLabel" destination="yD4-OQ-WYj" id="IpZ-xe-SDz"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="A6j-Qw-RR9" id="Esk-ZD-fUK"/>
-                            <outlet property="delegate" destination="A6j-Qw-RR9" id="0JX-aa-sMX"/>
+                            <outlet property="dataSource" destination="A6j-Qw-RR9" id="fag-Us-uVw"/>
+                            <outlet property="delegate" destination="A6j-Qw-RR9" id="Nlh-y1-uYt"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="hhk-aS-KGC"/>

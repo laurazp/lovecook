@@ -1,11 +1,30 @@
 
 import Foundation
 
+typealias GetCategoriesResult = ([Category]) -> ()
+
 class FoodApiDataSource {
     
-    func getCategoriesData(url: URL, completion: @escaping ([Category])-> ()) {
+    func getCategoriesData(url: URL, completion: @escaping ([Category]?)-> ()) {
         
-        URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            if let error = error {
+                print("Failed to convert \(error)")
+                //TODO: Show error message in TableView ??
+                completion(nil)
+            } else if let data = data {
+                let categoriesResponse = try?  JSONDecoder().decode(CategoriesResponse.self, from: data)
+                if let categoriesResponse = categoriesResponse {
+                    completion(categoriesResponse.categories)
+                }
+            }
+        }.resume()
+    }
+    
+    /*func getCategoriesData(url: URL, completion: @escaping GetCategoriesResult) {
+        
+        URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
             guard let data = data, error == nil else {
                 print("Something went wrong...")
                 //TODO: Show error in tableview ??
@@ -26,14 +45,14 @@ class FoodApiDataSource {
                 print("Failed to convert \(error)")
             }
             
-//            guard let json = result else {
-//                return
-//            }
-//
-//            print(json.categories)
-//            DispatchQueue.main.async {
-//                completion(json.categories)
-//            }
+            guard let json = result else {
+                return
+            }
+
+            print(json.categories)
+            DispatchQueue.main.async {
+                completion(json.categories)
+            }
         }).resume()
-    }
+    }*/
 }
