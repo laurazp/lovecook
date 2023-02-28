@@ -3,37 +3,37 @@ import Foundation
 
 class FoodApiDataSource {
     
-    func getCategoriesData(completion: @escaping ([Category])-> ()) {
+    func getCategoriesData(url: URL, completion: @escaping ([Category])-> ()) {
         
-        let url = "https://www.themealdb.com/api/json/v1/1/categories.php"
-        
-        let task = URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: { (data, response, error) in
+        URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
             guard let data = data, error == nil else {
                 print("Something went wrong...")
+                //TODO: Show error in tableview ??
                 return
             }
             
-            // Have data
             var result: CategoriesResponse?
             do {
                 result = try JSONDecoder().decode(CategoriesResponse.self, from: data)
-                DispatchQueue.main.async {
-                    completion(result!.categories)
+                if let result = result {
+                    DispatchQueue.main.async {
+                        print(result.categories)
+                        completion(result.categories)
+                    }
                 }
             }
             catch {
                 print("Failed to convert \(error)")
             }
             
-            guard let json = result else {
-                return
-            }
-            
-            print(json.categories)
-            DispatchQueue.main.async {
-                completion(json.categories)
-            }
-        })
-        task.resume()
+//            guard let json = result else {
+//                return
+//            }
+//
+//            print(json.categories)
+//            DispatchQueue.main.async {
+//                completion(json.categories)
+//            }
+        }).resume()
     }
 }

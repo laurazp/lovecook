@@ -20,7 +20,8 @@ final class CategoriesViewModel {
     }
     
     private func getCategories() {
-        apiDataSource.getCategoriesData { categories in
+        let url = URL(string: "https://www.themealdb.com/api/json/v1/1/categories.php")!
+        apiDataSource.getCategoriesData(url: url) { categories in
             self.categoriesDataList = categories
             self.viewDelegate?.updateView()
         }

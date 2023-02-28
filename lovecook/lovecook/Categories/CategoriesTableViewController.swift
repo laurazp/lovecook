@@ -17,7 +17,10 @@ class CategoriesTableViewController: UITableViewController {
     
     // MARK: - View Model Output
     func updateView() {
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+        //tableView.reloadData()
     }
     
     private func setupTable() {
