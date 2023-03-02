@@ -8,13 +8,12 @@ class CategoriesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //TODO: Hide Back item !!
         title = "Categories"
         setupTable()
     }
     
     private func setupTable() {
-        self.navigationController?.navigationBar.prefersLargeTitles = true
+//        self.navigationController?.navigationBar.prefersLargeTitles = true
 //        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemOrange]
         
         let url = URL(string: "https://www.themealdb.com/api/json/v1/1/categories.php")!
@@ -48,8 +47,26 @@ class CategoriesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //TODO: Implement (open url in navigator?)
         
+        let storyboard = UIStoryboard(name: "MealsByCategoryStoryboard", bundle: nil)
+        if let viewController = storyboard.instantiateViewController(withIdentifier: "MealsByCategoryViewController") as? MealsByCategoryViewController {
+            navigationController?.navigationBar.prefersLargeTitles = true
+            
+            //viewController.viewModel.viewDelegate = viewController
+            let category = categoriesViewModel.categoryAtIndex(indexPath.row)
+            viewController.title = category.title
+            viewController.categoryTitleLabel.text = category.title
+            
+            //TODO: Show meals in that category
+            
+            /*
+             let backItem = UIBarButtonItem()
+             backItem.title = "Back"
+             navigationItem.backBarButtonItem = backItem
+             viewController.viewModel.earthquakeDetail = selectedEarthquakeDetail*/
+            
+            navigationController?.pushViewController(viewController, animated: true)
+        }
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

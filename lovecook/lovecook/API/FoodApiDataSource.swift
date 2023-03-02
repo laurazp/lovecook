@@ -21,42 +21,20 @@ class FoodApiDataSource {
         }.resume()
     }
     
-    /*func getCategoriesData(url: URL, completion: @escaping GetCategoriesResult) {
-        
-        URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
-            guard let data = data, error == nil else {
-                print("Something went wrong...")
-                //TODO: Show error in tableview ??
-                return
-            }
+    func filterByCategory(url: URL, completion: @escaping ([Meal]?)-> ()) {
+        URLSession.shared.dataTask(with: url) { data, response, error in
             
-            var result: CategoriesResponse?
-            do {
-                result = try JSONDecoder().decode(CategoriesResponse.self, from: data)
-                if let result = result {
-                    DispatchQueue.main.async {
-                        print(result.categories)
-                        completion(result.categories)
-                    }
+            if let error = error {
+                print("Failed to convert \(error)")
+                //TODO: Show error message in TableView ??
+                completion(nil)
+            } else if let data = data {
+                let mealsResponse = try?  JSONDecoder().decode(MealResponse.self, from: data)
+                if let mealsResponse = mealsResponse {
+                    completion(mealsResponse.meals)
                 }
             }
-            catch {
-                print("Failed to convert \(error)")
-            }
-            
-            guard let json = result else {
-                return
-            }
-
-            print(json.categories)
-            DispatchQueue.main.async {
-                completion(json.categories)
-            }
-        }).resume()
-    }*/
-    
-    func filterByCategory(url: URL, completion: @escaping ([Meal]?)-> ()) {
-        
+        }.resume()
     }
     
     /*
