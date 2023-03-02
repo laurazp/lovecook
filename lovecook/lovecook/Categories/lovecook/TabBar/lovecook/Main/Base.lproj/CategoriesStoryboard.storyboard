@@ -24,7 +24,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="xPI-WY-HUr">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
+                                            <rect key="frame" x="20" y="0.0" width="373" height="90"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Zy-HC-vXs">
                                                     <rect key="frame" x="0.0" y="5" width="80" height="80"/>
@@ -34,7 +34,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yD4-OQ-WYj">
-                                                    <rect key="frame" x="97" y="35" width="296" height="20.333333333333329"/>
+                                                    <rect key="frame" x="97" y="35" width="276" height="20.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -43,8 +43,8 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="xPI-WY-HUr" firstAttribute="leading" secondItem="YXE-NU-4lX" secondAttribute="leading" id="6GD-8I-zPD"/>
                                         <constraint firstAttribute="trailing" secondItem="xPI-WY-HUr" secondAttribute="trailing" id="S4M-fb-7hz"/>
+                                        <constraint firstItem="xPI-WY-HUr" firstAttribute="leading" secondItem="YXE-NU-4lX" secondAttribute="leading" constant="20" id="jxl-K9-8An"/>
                                         <constraint firstItem="xPI-WY-HUr" firstAttribute="top" secondItem="YXE-NU-4lX" secondAttribute="top" id="m8F-Hg-dLw"/>
                                         <constraint firstAttribute="bottom" secondItem="xPI-WY-HUr" secondAttribute="bottom" id="s9T-2a-tMJ"/>
                                     </constraints>
@@ -61,6 +61,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="hhk-aS-KGC"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TrL-rx-hmC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,6 +70,7 @@
         <!--Categories-->
         <scene sceneID="G95-dy-ez9">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pJj-iT-WpS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sWm-LN-DLX" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Categories" image="fork.knife" catalog="system" id="F0b-zR-fiv"/>
                     <toolbarItems/>
@@ -77,11 +79,13 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xya-ZI-vOa">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="A6j-Qw-RR9" kind="relationship" relationship="rootViewController" id="WUp-VM-Yug"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pJj-iT-WpS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1764" y="1715"/>
         </scene>

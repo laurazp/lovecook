@@ -5,6 +5,7 @@ class HomeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.navigationItem.hidesBackButton = true
         configureNavigationBar()
     }
     
