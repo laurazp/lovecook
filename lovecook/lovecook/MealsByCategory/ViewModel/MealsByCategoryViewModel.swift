@@ -1,7 +1,25 @@
 
 import Foundation
+import UIKit
 
-struct MealsByCategoryListViewModel {
+final class MealsByCategoryViewModel {
+    weak var viewDelegate: MealsByCategoryViewController?
+//    var mealsByCategoryDetail: MealsByCategoryDetail?
+    var category: Category?
+    
+    func viewDidLoad() {
+//        if let mealsByCategoryDetail = mealsByCategoryDetail {
+//            viewDelegate?.configureView(with: mealsByCategoryDetail)
+//        }
+        if let category = category {
+            viewDelegate?.configureView(with: category)
+        }
+    }
+}
+
+
+/*
+ struct MealsByCategoryListViewModel {
     let meals: [Meal]?
 
     var numberOfSections: Int {
@@ -37,3 +55,4 @@ struct MealsByCategoryViewModel {
         self.meal = meal
     }
 }
+*/
