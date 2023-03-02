@@ -44,8 +44,8 @@ class MealsByCategoryViewController: UIViewController {
         // Assigning data to variables
         categoryTitleLabel.text = detail.strCategory
         print("Title label text = \(detail.strCategory)")
-        //let image = UIImage(imageLiteralResourceName: detail.strCategoryThumb)
-        //categoryImageView.image = image
+        let imageUrl = URL(string: detail.strCategoryThumb)!
+        categoryImageView.load(url: imageUrl)
     }
     
 //    func configureCell(cell: EarthquakeEventCell, indexPath: IndexPath) {
