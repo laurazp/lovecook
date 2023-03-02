@@ -28,6 +28,8 @@
 		22821A3429B0144F00DF704F /* MealsByCategoryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22821A3329B0144F00DF704F /* MealsByCategoryStoryboard.storyboard */; };
 		22821A3629B016B600DF704F /* MealsByCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22821A3529B016B600DF704F /* MealsByCategoryViewModel.swift */; };
 		22BFFB9129B1329B0040E92F /* CategoryViewModelToCategoryMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BFFB9029B1329B0040E92F /* CategoryViewModelToCategoryMapper.swift */; };
+		22BFFB9B29B164720040E92F /* MealsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BFFB9929B164720040E92F /* MealsCell.swift */; };
+		22BFFB9C29B164720040E92F /* MealsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22BFFB9A29B164720040E92F /* MealsCell.xib */; };
 		22F507AE29A7F593009653A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507AD29A7F593009653A3 /* AppDelegate.swift */; };
 		22F507B029A7F593009653A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507AF29A7F593009653A3 /* SceneDelegate.swift */; };
 		22F507B229A7F593009653A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507B129A7F593009653A3 /* ViewController.swift */; };
@@ -88,6 +90,8 @@
 		22821A3329B0144F00DF704F /* MealsByCategoryStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MealsByCategoryStoryboard.storyboard; sourceTree = "<group>"; };
 		22821A3529B016B600DF704F /* MealsByCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsByCategoryViewModel.swift; sourceTree = "<group>"; };
 		22BFFB9029B1329B0040E92F /* CategoryViewModelToCategoryMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModelToCategoryMapper.swift; sourceTree = "<group>"; };
+		22BFFB9929B164720040E92F /* MealsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsCell.swift; sourceTree = "<group>"; };
+		22BFFB9A29B164720040E92F /* MealsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealsCell.xib; sourceTree = "<group>"; };
 		22F507AA29A7F593009653A3 /* lovecook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lovecook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F507AD29A7F593009653A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22F507AF29A7F593009653A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -245,6 +249,7 @@
 		22821A3029B0123900DF704F /* MealsByCategory */ = {
 			isa = PBXGroup;
 			children = (
+				22BFFB9229B160BA0040E92F /* Cells */,
 				22BFFB8B29B125670040E92F /* ViewModel */,
 				22821A3329B0144F00DF704F /* MealsByCategoryStoryboard.storyboard */,
 				22821A3129B012C000DF704F /* MealsByCategoryViewController.swift */,
@@ -266,6 +271,15 @@
 				22BFFB9029B1329B0040E92F /* CategoryViewModelToCategoryMapper.swift */,
 			);
 			path = Mappers;
+			sourceTree = "<group>";
+		};
+		22BFFB9229B160BA0040E92F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				22BFFB9929B164720040E92F /* MealsCell.swift */,
+				22BFFB9A29B164720040E92F /* MealsCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		22F507A129A7F593009653A3 = {
@@ -484,6 +498,7 @@
 				228219BA29AAC85F00DF704F /* HomeStoryboard.storyboard in Resources */,
 				228219CA29AACC3B00DF704F /* CategoriesCell.xib in Resources */,
 				22F507E229A81359009653A3 /* food_background.jpg in Resources */,
+				22BFFB9C29B164720040E92F /* MealsCell.xib in Resources */,
 				22F507B729A7F59B009653A3 /* Assets.xcassets in Resources */,
 				228219C529AAC99E00DF704F /* MyRecipesStoryboard.storyboard in Resources */,
 				22F507B529A7F593009653A3 /* Main.storyboard in Resources */,
@@ -515,6 +530,7 @@
 				228219C929AACC3B00DF704F /* CategoriesCell.swift in Sources */,
 				22821A2F29AFA8BC00DF704F /* GetMealsUseCase.swift in Sources */,
 				22F507EC29A99A85009653A3 /* HomeTableViewController.swift in Sources */,
+				22BFFB9B29B164720040E92F /* MealsCell.swift in Sources */,
 				22F507F929AA32E3009653A3 /* TabBarController.swift in Sources */,
 				22821A3629B016B600DF704F /* MealsByCategoryViewModel.swift in Sources */,
 				22F507DF29A7FE2B009653A3 /* MainPageViewController.swift in Sources */,
