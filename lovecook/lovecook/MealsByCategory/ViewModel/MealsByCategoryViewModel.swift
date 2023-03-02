@@ -4,55 +4,31 @@ import UIKit
 
 final class MealsByCategoryViewModel {
     weak var viewDelegate: MealsByCategoryViewController?
-//    var mealsByCategoryDetail: MealsByCategoryDetail?
     var category: Category?
+    private var mealsData = [Meal]()
+    
+    private let getMealsUseCase = GetMealsUseCase()
     
     func viewDidLoad() {
-//        if let mealsByCategoryDetail = mealsByCategoryDetail {
-//            viewDelegate?.configureView(with: mealsByCategoryDetail)
-//        }
         if let category = category {
             viewDelegate?.configureView(with: category)
+            getMealsByCategory(category: category.strCategory)
         }
     }
-}
-
-
-/*
- struct MealsByCategoryListViewModel {
-    let meals: [Meal]?
-
-    var numberOfSections: Int {
-        return 1
+    
+    private func getMealsByCategory(category: String) {
+        let url = URL(string: "https://www.themealdb.com/api/json/v1/1/filter.php?c=\(category)")!
+        getMealsUseCase.getMealsFilteredByCategory(url: url) { meals in
+            self.mealsData = meals ?? [Meal]()
+            self.viewDelegate?.updateView()
+        }
     }
     
-    func numberOfRowsInSection(_ section: Int) -> Int {
-        return self.meals?.count ?? 0
+    func getMeal(at index: Int) -> Meal {
+        mealsData[index]
     }
     
-    func categoryAtIndex(_ index: Int) -> MealsByCategoryViewModel {
-        let meal = self.meals?[index] ?? Meal(strMeal: "Error", strMealThumb: "Error", idMeal: "Error")
-        return MealsByCategoryViewModel(meal)
+    func numberOfItems() -> Int {
+        mealsData.count
     }
 }
-
-struct MealsByCategoryViewModel {
-    private let meal: Meal
-    
-    var title: String {
-        return self.meal.strMeal
-    }
-    
-    var image: String {
-        return self.meal.strMealThumb
-    }
-    
-    var id: String {
-        return self.meal.idMeal
-    }
-    
-    init(_ meal: Meal) {
-        self.meal = meal
-    }
-}
-*/
