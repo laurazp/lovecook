@@ -5,6 +5,8 @@ import UIKit
 class CategoriesTableViewController: UITableViewController {
 
     private var categoriesViewModel: CategoriesListViewModel!
+//    private var mealsByCategoryViewModel = MealsByCategoryViewModel()
+    private let categoryViewModelToCategoryMapper = CategoryViewModelToCategoryMapper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,20 +52,16 @@ class CategoriesTableViewController: UITableViewController {
         
         let storyboard = UIStoryboard(name: "MealsByCategoryStoryboard", bundle: nil)
         if let viewController = storyboard.instantiateViewController(withIdentifier: "MealsByCategoryViewController") as? MealsByCategoryViewController {
-            navigationController?.navigationBar.prefersLargeTitles = true
             
-            //viewController.viewModel.viewDelegate = viewController
+            viewController.viewModel.viewDelegate = viewController
             let category = categoriesViewModel.categoryAtIndex(indexPath.row)
-            viewController.title = category.title
-            viewController.categoryTitleLabel.text = category.title
+            let mappedCategory = categoryViewModelToCategoryMapper.mapToCategory(categoryViewModel: category)
+//            mealsByCategoryViewModel.category = mappedCategory
+            viewController.viewModel.category = mappedCategory
             
-            //TODO: Show meals in that category
-            
-            /*
-             let backItem = UIBarButtonItem()
+            /*let backItem = UIBarButtonItem()
              backItem.title = "Back"
-             navigationItem.backBarButtonItem = backItem
-             viewController.viewModel.earthquakeDetail = selectedEarthquakeDetail*/
+             navigationItem.backBarButtonItem = backItem*/
             
             navigationController?.pushViewController(viewController, animated: true)
         }
