@@ -7,7 +7,6 @@ class FoodApiDataSource {
     func getCategoriesData(url: URL, completion: @escaping ([Category]?)-> ()) {
         
         URLSession.shared.dataTask(with: url) { data, response, error in
-            
             if let error = error {
                 print("Failed to convert \(error)")
                 //TODO: Show error message in TableView ??
@@ -23,7 +22,6 @@ class FoodApiDataSource {
     
     func filterByCategory(url: URL, completion: @escaping ([Meal]?)-> ()) {
         URLSession.shared.dataTask(with: url) { data, response, error in
-            
             if let error = error {
                 print("Failed to convert \(error)")
                 //TODO: Show error message in TableView ??
@@ -35,5 +33,20 @@ class FoodApiDataSource {
                 }
             }
         }.resume()
+    }
+    
+    func getRecipeById(url: URL, completion: @escaping ([Recipe]?)-> ()) {
+            URLSession.shared.dataTask(with: url) { data, response, error in
+                if let error = error {
+                    print("Failed to convert \(error)")
+                    //TODO: Show error message in TableView ??
+                    completion(nil)
+                } else if let data = data {
+                    let recipeResponse = try?  JSONDecoder().decode(RecipeResponse.self, from: data)
+                    if let recipeResponse = recipeResponse {
+                        completion(recipeResponse.details)
+                    }
+                }
+            }.resume()
     }
 }
