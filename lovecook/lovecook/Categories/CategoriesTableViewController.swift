@@ -15,8 +15,8 @@ class CategoriesTableViewController: UITableViewController {
     }
     
     private func setupTable() {
-//        self.navigationController?.navigationBar.prefersLargeTitles = true
-//        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemOrange]
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.customLightGreen()]
         
         let url = URL(string: "https://www.themealdb.com/api/json/v1/1/categories.php")!
         FoodApiDataSource().getCategoriesData(url: url) { categories in
@@ -59,9 +59,10 @@ class CategoriesTableViewController: UITableViewController {
 //            mealsByCategoryViewModel.category = mappedCategory
             viewController.viewModel.category = mappedCategory
             
-            /*let backItem = UIBarButtonItem()
-             backItem.title = "Back"
-             navigationItem.backBarButtonItem = backItem*/
+            let backItem = UIBarButtonItem()
+            backItem.title = "Back"
+            backItem.tintColor = UIColor.customLightGreen()
+            navigationItem.backBarButtonItem = backItem
             
             navigationController?.pushViewController(viewController, animated: true)
         }

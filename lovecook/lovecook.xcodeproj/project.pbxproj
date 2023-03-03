@@ -32,6 +32,7 @@
 		22BFFB9C29B164720040E92F /* MealsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22BFFB9A29B164720040E92F /* MealsCell.xib */; };
 		22BFFB9E29B1FB570040E92F /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BFFB9D29B1FB570040E92F /* Recipe.swift */; };
 		22BFFBA129B202290040E92F /* RecipeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BFFBA029B202290040E92F /* RecipeResponse.swift */; };
+		22BFFBA329B2B1F70040E92F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BFFBA229B2B1F70040E92F /* Colors.swift */; };
 		22F507AE29A7F593009653A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507AD29A7F593009653A3 /* AppDelegate.swift */; };
 		22F507B029A7F593009653A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507AF29A7F593009653A3 /* SceneDelegate.swift */; };
 		22F507B229A7F593009653A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507B129A7F593009653A3 /* ViewController.swift */; };
@@ -96,6 +97,7 @@
 		22BFFB9A29B164720040E92F /* MealsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealsCell.xib; sourceTree = "<group>"; };
 		22BFFB9D29B1FB570040E92F /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		22BFFBA029B202290040E92F /* RecipeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeResponse.swift; sourceTree = "<group>"; };
+		22BFFBA229B2B1F70040E92F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		22F507AA29A7F593009653A3 /* lovecook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lovecook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F507AD29A7F593009653A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22F507AF29A7F593009653A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -254,10 +256,10 @@
 		22821A3029B0123900DF704F /* MealsByCategory */ = {
 			isa = PBXGroup;
 			children = (
-				22BFFB9229B160BA0040E92F /* Cells */,
-				22BFFB8B29B125670040E92F /* ViewModel */,
 				22821A3329B0144F00DF704F /* MealsByCategoryStoryboard.storyboard */,
 				22821A3129B012C000DF704F /* MealsByCategoryViewController.swift */,
+				22BFFB8B29B125670040E92F /* ViewModel */,
+				22BFFB9229B160BA0040E92F /* Cells */,
 			);
 			path = MealsByCategory;
 			sourceTree = "<group>";
@@ -319,13 +321,13 @@
 		22F507AC29A7F593009653A3 /* lovecook */ = {
 			isa = PBXGroup;
 			children = (
+				22F507E329A8292B009653A3 /* CustomElements */,
 				228219CB29AACF2700DF704F /* API */,
 				228219C229AAC97800DF704F /* MyRecipes */,
 				228219BF29AAC90A00DF704F /* Favorites */,
 				2250271129AA987B003D88EF /* Home */,
 				228219BB29AAC8B000DF704F /* Categories */,
 				22821A3029B0123900DF704F /* MealsByCategory */,
-				22F507E329A8292B009653A3 /* CustomElements */,
 				22F507EA29A99A6B009653A3 /* TabBar */,
 				22F507DD29A7FE09009653A3 /* Main */,
 				22F507AD29A7F593009653A3 /* AppDelegate.swift */,
@@ -381,6 +383,7 @@
 				2250270F29AA8B6C003D88EF /* Checkbox.swift */,
 				22F507E429A82962009653A3 /* CustomButton.swift */,
 				22F507F329A9A16F009653A3 /* StyledTextField.swift */,
+				22BFFBA229B2B1F70040E92F /* Colors.swift */,
 			);
 			path = CustomElements;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22821A2629AFA78200DF704F /* Meal.swift in Sources */,
+				22BFFBA329B2B1F70040E92F /* Colors.swift in Sources */,
 				228219C929AACC3B00DF704F /* CategoriesCell.swift in Sources */,
 				22821A2F29AFA8BC00DF704F /* GetMealsUseCase.swift in Sources */,
 				22F507EC29A99A85009653A3 /* HomeTableViewController.swift in Sources */,

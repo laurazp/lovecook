@@ -14,7 +14,7 @@ class CustomButton: UIButton {
     }
     
     func defaultButtonSetUp() {
-        layer.backgroundColor = UIColor(red:0.67, green:0.76, blue:0.65, alpha:1.0).cgColor
+        layer.backgroundColor = UIColor.customLightGreen().cgColor
         layer.cornerRadius = layer.frame.height/2
         layer.masksToBounds = true
         tintColor = .white
@@ -24,9 +24,9 @@ class CustomButton: UIButton {
         layer.backgroundColor = UIColor.systemBackground.cgColor
         layer.cornerRadius = layer.frame.height/2
         layer.borderWidth = 2
-        layer.borderColor = UIColor(red:0.67, green:0.76, blue:0.65, alpha:1.0).cgColor
+        layer.borderColor = UIColor.customLightGreen().cgColor
         layer.masksToBounds = true
-        tintColor = UIColor(red:0.67, green:0.76, blue:0.65, alpha:1.0)
+        tintColor = UIColor.customLightGreen()
     }
     
     //TODO: Change button title font ?
