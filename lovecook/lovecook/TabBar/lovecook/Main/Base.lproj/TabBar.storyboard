@@ -9,7 +9,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="ljI-KM-rxf">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarController" id="Ph6-JP-Y5Q" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="Ph6-JP-Y5Q" customClass="TabBarController" customModule="lovecook" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Mg8-eO-hjx"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yId-sk-FXk">
