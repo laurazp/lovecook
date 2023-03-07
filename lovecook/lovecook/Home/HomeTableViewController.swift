@@ -6,7 +6,7 @@ class HomeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarController?.navigationItem.hidesBackButton = true
-        configureNavigationBar()
+        navigationItem.configureNavigationItem(navigationItem: navigationItem)
         title = "Home"
         setupTable()
     }
@@ -14,11 +14,6 @@ class HomeTableViewController: UITableViewController {
     private func setupTable() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.customLightGreen()]
-    }
-    
-    func configureNavigationBar() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "info.circle"), style: .done, target: self, action: nil)
-        navigationItem.rightBarButtonItem?.tintColor = UIColor.customLightGreen()
     }
 
     // MARK: - Table view data source

@@ -33,6 +33,7 @@
 		22BFFB9E29B1FB570040E92F /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BFFB9D29B1FB570040E92F /* Recipe.swift */; };
 		22BFFBA129B202290040E92F /* RecipeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BFFBA029B202290040E92F /* RecipeResponse.swift */; };
 		22BFFBA329B2B1F70040E92F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BFFBA229B2B1F70040E92F /* Colors.swift */; };
+		22BFFBA529B411AC0040E92F /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BFFBA429B411AC0040E92F /* CustomNavigationBar.swift */; };
 		22F507AE29A7F593009653A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507AD29A7F593009653A3 /* AppDelegate.swift */; };
 		22F507B029A7F593009653A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507AF29A7F593009653A3 /* SceneDelegate.swift */; };
 		22F507B229A7F593009653A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507B129A7F593009653A3 /* ViewController.swift */; };
@@ -98,6 +99,7 @@
 		22BFFB9D29B1FB570040E92F /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		22BFFBA029B202290040E92F /* RecipeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeResponse.swift; sourceTree = "<group>"; };
 		22BFFBA229B2B1F70040E92F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		22BFFBA429B411AC0040E92F /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		22F507AA29A7F593009653A3 /* lovecook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lovecook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F507AD29A7F593009653A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22F507AF29A7F593009653A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -384,6 +386,7 @@
 				22F507E429A82962009653A3 /* CustomButton.swift */,
 				22F507F329A9A16F009653A3 /* StyledTextField.swift */,
 				22BFFBA229B2B1F70040E92F /* Colors.swift */,
+				22BFFBA429B411AC0040E92F /* CustomNavigationBar.swift */,
 			);
 			path = CustomElements;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 				228219C929AACC3B00DF704F /* CategoriesCell.swift in Sources */,
 				22821A2F29AFA8BC00DF704F /* GetMealsUseCase.swift in Sources */,
 				22F507EC29A99A85009653A3 /* HomeTableViewController.swift in Sources */,
+				22BFFBA529B411AC0040E92F /* CustomNavigationBar.swift in Sources */,
 				22BFFB9B29B164720040E92F /* MealsCell.swift in Sources */,
 				22F507F929AA32E3009653A3 /* TabBarController.swift in Sources */,
 				22821A3629B016B600DF704F /* MealsByCategoryViewModel.swift in Sources */,
