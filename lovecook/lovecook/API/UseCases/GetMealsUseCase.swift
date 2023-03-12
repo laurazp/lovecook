@@ -2,12 +2,14 @@
 import Foundation
 
 typealias GetMealsResult = ([Meal]?) -> ()
+typealias GetRecipeResult = ([Recipe]?) -> ()
 
 struct GetMealsUseCase {
     private let dataSource = FoodApiDataSource()
     
-    func getMeals(url: URL, completion: @escaping GetMealsResult) {
-        //dataSource.getMealsData(url: url, completion: completion)
+    func getRecipe(url: URL, completion: @escaping GetRecipeResult) {
+        print(url)
+        dataSource.getRecipeById(url: url, completion: completion)
     }
     
     func getMealsFilteredByCategory(url: URL, completion: @escaping GetMealsResult) {

@@ -51,8 +51,3 @@ struct Recipe: Codable {
     let strMeasure19: String?
     let strMeasure20: String?
 }
-
-/*
- Lookup full meal details by id
- www.themealdb.com/api/json/v1/1/lookup.php?i=52772
- */
