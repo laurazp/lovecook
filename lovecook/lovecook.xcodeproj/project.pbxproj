@@ -37,6 +37,7 @@
 		22BFFBA829BB87590040E92F /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BFFBA729BB87590040E92F /* RecipesViewController.swift */; };
 		22BFFBAA29BB876F0040E92F /* RecipesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22BFFBA929BB876F0040E92F /* RecipesStoryboard.storyboard */; };
 		22BFFBAD29BB89F70040E92F /* RecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BFFBAC29BB89F70040E92F /* RecipesViewModel.swift */; };
+		22BFFBB229BF774D0040E92F /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BFFBB129BF774D0040E92F /* FavoritesViewModel.swift */; };
 		22F507AE29A7F593009653A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507AD29A7F593009653A3 /* AppDelegate.swift */; };
 		22F507B029A7F593009653A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507AF29A7F593009653A3 /* SceneDelegate.swift */; };
 		22F507B229A7F593009653A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F507B129A7F593009653A3 /* ViewController.swift */; };
@@ -106,6 +107,7 @@
 		22BFFBA729BB87590040E92F /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		22BFFBA929BB876F0040E92F /* RecipesStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipesStoryboard.storyboard; sourceTree = "<group>"; };
 		22BFFBAC29BB89F70040E92F /* RecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewModel.swift; sourceTree = "<group>"; };
+		22BFFBB129BF774D0040E92F /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		22F507AA29A7F593009653A3 /* lovecook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lovecook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F507AD29A7F593009653A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22F507AF29A7F593009653A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			children = (
 				228219C029AAC93300DF704F /* FavoritesStoryboard.storyboard */,
 				22F507ED29A99B40009653A3 /* FavoritesTableViewController.swift */,
+				22BFFBB029BF77370040E92F /* ViewModel */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -320,6 +323,14 @@
 			isa = PBXGroup;
 			children = (
 				22BFFBAC29BB89F70040E92F /* RecipesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		22BFFBB029BF77370040E92F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				22BFFBB129BF774D0040E92F /* FavoritesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -596,6 +607,7 @@
 				22BFFB9129B1329B0040E92F /* CategoryViewModelToCategoryMapper.swift in Sources */,
 				228219D429AAD24000DF704F /* CategoriesViewModel.swift in Sources */,
 				228219D029AACF7E00DF704F /* Category.swift in Sources */,
+				22BFFBB229BF774D0040E92F /* FavoritesViewModel.swift in Sources */,
 				228219D229AACFF600DF704F /* CategoriesResponse.swift in Sources */,
 				22F507E729A83690009653A3 /* LogInViewController.swift in Sources */,
 				22BFFBA129B202290040E92F /* RecipeResponse.swift in Sources */,
