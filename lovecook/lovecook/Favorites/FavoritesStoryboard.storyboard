@@ -7,21 +7,46 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Favorites Table View Controller-->
+        <!--FavoritesTableViewController-->
         <scene sceneID="yvr-pj-Ykf">
             <objects>
-                <tableViewController storyboardIdentifier="FavoritesViewController" id="xJ4-BM-O29" customClass="FavoritesTableViewController" customModule="lovecook" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="FavoritesViewController" title="FavoritesTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xJ4-BM-O29" customClass="FavoritesTableViewController" customModule="lovecook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="1Gy-fd-EIr">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ctL-ng-ee2">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoritesCell" id="ctL-ng-ee2">
+                                <rect key="frame" x="0.0" y="50" width="393" height="157.66667175292969"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ctL-ng-ee2" id="hEi-0a-Y7v">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="157.66667175292969"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hck-e7-bNL">
+                                            <rect key="frame" x="30" y="0.0" width="333" height="157.66666666666666"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K2N-qK-L46">
+                                                    <rect key="frame" x="0.0" y="0.0" width="333" height="129.33333333333334"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMw-lh-4MW">
+                                                    <rect key="frame" x="146" y="137.33333333333334" width="41.333333333333343" height="20.333333333333343"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="K2N-qK-L46" firstAttribute="leading" secondItem="hck-e7-bNL" secondAttribute="leadingMargin" id="ZXL-nd-czn"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hck-e7-bNL" firstAttribute="top" secondItem="hEi-0a-Y7v" secondAttribute="top" id="68x-2O-WzV"/>
+                                        <constraint firstAttribute="trailing" secondItem="hck-e7-bNL" secondAttribute="trailing" constant="30" id="dkT-FK-suE"/>
+                                        <constraint firstItem="hck-e7-bNL" firstAttribute="leading" secondItem="hEi-0a-Y7v" secondAttribute="leading" constant="30" id="j5f-Ju-xnh"/>
+                                        <constraint firstAttribute="bottom" secondItem="hck-e7-bNL" secondAttribute="bottom" id="vPq-KQ-69p"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
