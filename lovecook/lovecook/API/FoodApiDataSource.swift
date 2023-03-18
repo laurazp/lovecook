@@ -36,22 +36,27 @@ class FoodApiDataSource {
     }
     
     func getRecipeById(url: URL, completion: @escaping ([Recipe]?)-> ()) {
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                print("Failed to convert \(error)")
-                //TODO: Show error message??
-                completion(nil)
-                print("Error getting data")
-            } else if let data = data {
-                print("Data OK")
-                let recipeResponse = try?  JSONDecoder().decode(RecipeResponse.self, from: data)
-                if let recipeResponse = recipeResponse {
-                    print("decoding OK")
-                    completion(recipeResponse.meals)
-                    print("Selected meal:")
-                    print(recipeResponse.meals[0].strMeal)
+        
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+                    let jsonDecoder = JSONDecoder()
+                    if let error = error {
+                        print(error)
+                        completion(nil)
+                        return
+                    }
+                    guard let data = data else {
+                        print("data was nil")
+                        completion(nil)
+                        return
+                    }
+                    do {
+                        let recipeResponse = try jsonDecoder.decode(RecipeResponse.self, from: data)
+                        completion(recipeResponse.meals)
+                    } catch {
+                        print(error)
+                        completion(nil)
+                    }
                 }
-            }
-        }.resume()
+                task.resume()
     }
 }

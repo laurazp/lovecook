@@ -5,11 +5,11 @@ struct Recipe: Codable {
     let idMeal: String
     let strMeal: String //title
     let strCategory: String
-    let strArea: String
+    let strArea: String?
     let strInstructions: String
     let strMealThumb: String //url
-    let strTags: String //"Meat,Casserole"
-    let strYoutube: String //"https://www.youtube.com/watch?v=4aZr5hZXP_s"
+    let strTags: String? //"Meat,Casserole"
+    let strYoutube: String? //"https://www.youtube.com/watch?v=4aZr5hZXP_s"
     let strIngredient1: String?
     let strIngredient2: String?
     let strIngredient3: String?
