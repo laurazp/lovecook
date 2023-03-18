@@ -4,47 +4,88 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" restorationIdentifier="MealsCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealsCell" rowHeight="200" id="KGk-i7-Jjw" customClass="MealsCell" customModule="lovecook" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="MealsCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealsCell" rowHeight="250" id="KGk-i7-Jjw" customClass="MealsCell" customModule="lovecook" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="339" height="240"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                <rect key="frame" x="0.0" y="0.0" width="339" height="240"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="78s-47-XOM" userLabel="MealImageView">
-                        <rect key="frame" x="50" y="10" width="220" height="100"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uWI-f6-Kam" userLabel="CardView">
+                        <rect key="frame" x="0.0" y="0.0" width="339" height="228"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="78s-47-XOM" userLabel="MealImageView">
+                                <rect key="frame" x="20" y="20" width="299" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="kgj-jg-ZHE"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="tjw-bk-kJi">
+                                <rect key="frame" x="20" y="178" width="299" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5d-Kz-R6h" userLabel="MealTitleLabel">
+                                        <rect key="frame" x="0.0" y="5" width="241" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XY4-wZ-4Qi" userLabel="FavoritesButton">
+                                        <rect key="frame" x="269" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="dJW-QM-piV"/>
+                                            <constraint firstAttribute="width" constant="30" id="hRI-r8-tEb"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                                        <connections>
+                                            <action selector="btnRec:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="NP6-LX-VgY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="100" id="kgj-jg-ZHE"/>
+                            <constraint firstItem="78s-47-XOM" firstAttribute="top" secondItem="uWI-f6-Kam" secondAttribute="top" constant="20" id="3C2-dJ-3ql"/>
+                            <constraint firstAttribute="trailing" secondItem="78s-47-XOM" secondAttribute="trailing" constant="20" id="Kbv-y9-wwO"/>
+                            <constraint firstItem="tjw-bk-kJi" firstAttribute="top" secondItem="78s-47-XOM" secondAttribute="bottom" constant="8" symbolic="YES" id="QHE-wE-HQT"/>
+                            <constraint firstItem="78s-47-XOM" firstAttribute="leading" secondItem="uWI-f6-Kam" secondAttribute="leading" constant="20" id="R6B-nL-env"/>
+                            <constraint firstAttribute="bottom" secondItem="tjw-bk-kJi" secondAttribute="bottom" constant="20" id="aLk-px-9ME"/>
+                            <constraint firstAttribute="trailing" secondItem="tjw-bk-kJi" secondAttribute="trailing" constant="20" id="sKx-ly-08E"/>
+                            <constraint firstItem="tjw-bk-kJi" firstAttribute="leading" secondItem="uWI-f6-Kam" secondAttribute="leading" constant="20" id="uJh-67-yoU"/>
                         </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5d-Kz-R6h" userLabel="MealTitleLabel">
-                        <rect key="frame" x="50" y="120" width="220" height="20"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="I5d-Kz-R6h" firstAttribute="trailing" secondItem="78s-47-XOM" secondAttribute="trailing" id="3G3-En-BYG"/>
-                    <constraint firstAttribute="bottom" secondItem="I5d-Kz-R6h" secondAttribute="bottom" constant="10" id="769-hJ-8Pr"/>
-                    <constraint firstItem="I5d-Kz-R6h" firstAttribute="leading" secondItem="78s-47-XOM" secondAttribute="leading" id="IFX-Uk-iFJ"/>
-                    <constraint firstItem="78s-47-XOM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ceK-2o-0kU"/>
-                    <constraint firstItem="I5d-Kz-R6h" firstAttribute="top" secondItem="78s-47-XOM" secondAttribute="bottom" constant="10" id="ef4-NE-qOD"/>
-                    <constraint firstItem="78s-47-XOM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="rMj-ht-4m0"/>
-                    <constraint firstAttribute="trailing" secondItem="78s-47-XOM" secondAttribute="trailing" constant="50" id="xtv-s9-4R0"/>
+                    <constraint firstItem="uWI-f6-Kam" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="GSV-Z0-LRy"/>
+                    <constraint firstAttribute="trailing" secondItem="uWI-f6-Kam" secondAttribute="trailing" id="ReA-dV-6d1"/>
+                    <constraint firstItem="uWI-f6-Kam" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="UGR-JG-T6r"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="favoritesButton" destination="XY4-wZ-4Qi" id="Kud-KW-OrY"/>
                 <outlet property="mealImageView" destination="78s-47-XOM" id="Dug-OI-41d"/>
                 <outlet property="mealTitleLabel" destination="I5d-Kz-R6h" id="mFk-Gt-wiN"/>
             </connections>
-            <point key="canvasLocation" x="51.908396946564885" y="19.366197183098592"/>
+            <point key="canvasLocation" x="66.412213740458014" y="50.70422535211268"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
