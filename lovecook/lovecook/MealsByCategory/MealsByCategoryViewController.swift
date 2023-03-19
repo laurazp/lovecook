@@ -9,6 +9,7 @@ class MealsByCategoryViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var viewModel = MealsByCategoryViewModel()
+    private let categoryViewModelToCategoryMapper = CategoryViewModelToCategoryMapper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,5 +78,30 @@ extension MealsByCategoryViewController: UITableViewDelegate, UITableViewDataSou
         cell.indexPath = indexPath
         //cell.delegate = self
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard(name: "RecipesStoryboard", bundle: nil)
+        if let viewController = storyboard.instantiateViewController(withIdentifier: "RecipesViewController") as? RecipesViewController {
+            viewController.viewModel.viewDelegate = viewController //¿¿¿?????
+            
+            let meal = viewModel.getMeal(at: indexPath.row)
+            print("Meal Id:")
+            print(meal.idMeal)
+            viewController.viewModel.recipeId = meal.idMeal
+            //viewController.viewModel.setRecipe(recipeId: meal.idMeal)
+            
+            let backItem = UIBarButtonItem()
+            backItem.title = "Back"
+            backItem.tintColor = UIColor.customLightGreen()
+            navigationItem.backBarButtonItem = backItem
+            
+            navigationController?.pushViewController(viewController, animated: true)
+        }
     }
 }
