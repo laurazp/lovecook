@@ -15,8 +15,8 @@ class RecipesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupLabels()
         viewModel.viewDidLoad()
+        setupLabels()
     }
     
     private func setupLabels() {
@@ -30,9 +30,11 @@ class RecipesViewController: UIViewController {
     }
     
     private func configure(with detail: Recipe) {
+        print("configuring...")
         let imageUrl = URL(string: detail.strMealThumb)!
         recipeImageView.load(url: imageUrl)
         recipeTitleLabel.text = detail.strMeal
+        print("Configuring cell: title = \(detail.strMeal)")
         recipeCategoryLabel.text = "Category: \(detail.strCategory)"
         recipeAreaLabel.text = "Area: \(detail.strArea)"
         recipeInstructionsLabel.text = detail.strInstructions

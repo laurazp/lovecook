@@ -37,7 +37,7 @@ class FoodApiDataSource {
     
     func getRecipeById(url: URL, completion: @escaping ([Recipe]?)-> ()) {
         
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
                     let jsonDecoder = JSONDecoder()
                     if let error = error {
                         print(error)
@@ -51,12 +51,12 @@ class FoodApiDataSource {
                     }
                     do {
                         let recipeResponse = try jsonDecoder.decode(RecipeResponse.self, from: data)
+                        print("Decoding ok")
                         completion(recipeResponse.meals)
                     } catch {
                         print(error)
                         completion(nil)
                     }
-                }
-                task.resume()
+                }.resume()
     }
 }

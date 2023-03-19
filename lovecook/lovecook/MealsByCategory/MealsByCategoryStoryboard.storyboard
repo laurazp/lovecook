@@ -37,23 +37,23 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wWh-jl-JLa">
-                                        <rect key="frame" x="0.0" y="285.66666666666669" width="393" height="529.33333333333326"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wWh-jl-JLa">
+                                        <rect key="frame" x="20" y="285.66666666666669" width="353" height="529.33333333333326"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="a17-sm-Rcr" firstAttribute="leading" secondItem="Yxr-UY-vgB" secondAttribute="leading" id="Jyg-sN-mfh"/>
-                                    <constraint firstAttribute="trailing" secondItem="wWh-jl-JLa" secondAttribute="trailing" id="OhK-QR-i7R"/>
+                                    <constraint firstAttribute="trailing" secondItem="wWh-jl-JLa" secondAttribute="trailing" constant="20" id="OhK-QR-i7R"/>
                                     <constraint firstAttribute="trailing" secondItem="a17-sm-Rcr" secondAttribute="trailing" id="dUS-Jk-elr"/>
-                                    <constraint firstItem="wWh-jl-JLa" firstAttribute="leading" secondItem="Yxr-UY-vgB" secondAttribute="leading" id="ihX-IR-byL"/>
+                                    <constraint firstItem="wWh-jl-JLa" firstAttribute="leading" secondItem="Yxr-UY-vgB" secondAttribute="leading" constant="20" id="ihX-IR-byL"/>
                                     <constraint firstAttribute="trailing" secondItem="aRU-ux-HVU" secondAttribute="trailing" id="rFt-Yd-fkr"/>
                                     <constraint firstItem="aRU-ux-HVU" firstAttribute="leading" secondItem="Yxr-UY-vgB" secondAttribute="leading" id="xMN-R4-6GT"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wFX-Zm-T8z"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="Yxr-UY-vgB" firstAttribute="top" secondItem="wFX-Zm-T8z" secondAttribute="top" constant="-100" id="1sn-3L-Cnk"/>
                             <constraint firstItem="Yxr-UY-vgB" firstAttribute="leading" secondItem="wFX-Zm-T8z" secondAttribute="leading" id="UJw-g9-KuA"/>
@@ -98,6 +98,9 @@
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
