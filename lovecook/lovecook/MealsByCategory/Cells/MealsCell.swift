@@ -6,7 +6,6 @@ class MealsCell: UITableViewCell {
     @IBOutlet weak var mealTitleLabel: UILabel!
     @IBOutlet weak var mealImageView: UIImageView!
     @IBOutlet weak var favoritesButton: UIButton!
-    var favoriteSelected: Bool = true
     
     var indexPath: IndexPath = IndexPath()
     
@@ -23,15 +22,17 @@ class MealsCell: UITableViewCell {
     }
     
     private func configureFavoritesButton() {
-        //TODO:
+        favoritesButton.setImage(UIImage(systemName: "heart"), for: [])
+        favoritesButton.setImage(UIImage(systemName: "heart.fill"), for: UIControl.State.selected)
+        favoritesButton.addTarget(self, action: #selector(favoriteButtonTapped), for: UIControl.Event.touchUpInside)
     }
     
-//    @IBAction func favoriteButtonTapped(_ sender: UIButton) {
-//        favoriteSelected = !favoriteSelected
-//        if favoriteSelected {
-//            favoritesButton.setImage(UIImage(systemName: "heart.fill"), for: .selected)
-//        } else {
-//            favoritesButton.setImage(UIImage(named: "heart"), for: .normal)
-//        }
-//    }
+    @IBAction func favoriteButtonTapped(_ sender: UIButton) {
+        if favoritesButton.isSelected == true {
+            favoritesButton.isSelected = false
+          }else {
+              favoritesButton.isSelected = true
+              //TODO: save recipe in user's Favorites
+          }
+    }
 }

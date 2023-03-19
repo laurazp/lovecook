@@ -44,7 +44,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
                                         <connections>
-                                            <action selector="btnRec:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="NP6-LX-VgY"/>
+                                            <action selector="favoriteButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="nVY-ib-hgQ"/>
                                         </connections>
                                     </button>
                                 </subviews>
