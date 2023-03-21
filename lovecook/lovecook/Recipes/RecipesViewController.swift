@@ -15,6 +15,7 @@ class RecipesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Vamos a llamar a viewModel viewDidLoad")
         viewModel.viewDidLoad()
         setupLabels()
     }

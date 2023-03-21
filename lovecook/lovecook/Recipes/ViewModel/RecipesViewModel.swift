@@ -13,10 +13,18 @@ class RecipesViewModel {
     func viewDidLoad() {
         print("Inside viewModel's viewdidload")
         print(self.recipeId)
+        
+        //guard let finalRecipe = blabla else { return }
+        
         getRecipe(recipeId: self.recipeId)
-        if let selectedRecipe = self.recipe {  // <------ no se está llamando !!!!!!!!!!!!!!!!!!!
+        
+        //TODO: no seguir hasta que getRecipe haya terminado !!!!!!!
+        
+        print("Selected recipe is:")
+        print(self.recipe)
+        if let selectedRecipe = self.recipe {
             print("Recipe exists")
-            viewDelegate?.configureView(with: selectedRecipe)
+            self.viewDelegate?.configureView(with: selectedRecipe)
             //getRecipe(recipeId: recipe.idMeal)
         }
     }
@@ -26,8 +34,10 @@ class RecipesViewModel {
         getMealsUseCase.getRecipe(url: url) { meals in
             self.recipeResult = meals ?? [Recipe]()
             self.recipe = meals?[0]
-            print("Recipe ok")
-            print(self.recipe.customMirror.subjectType)
+            if let existingRecipe = self.recipe {
+                print("Recipe ok")
+                print(self.recipe.customMirror.subjectType)
+            }
         }
     }
     
