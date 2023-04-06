@@ -96,12 +96,14 @@ extension MealsByCategoryViewController: UITableViewDelegate, UITableViewDataSou
             print(meal.idMeal)
             viewController.viewModel.recipeId = meal.idMeal
             //viewController.viewModel.setRecipe(recipeId: meal.idMeal)
+            viewController.recipeId = meal.idMeal
             
             let backItem = UIBarButtonItem()
             backItem.title = "Back"
             backItem.tintColor = UIColor.customLightGreen()
             navigationItem.backBarButtonItem = backItem
-            
+            //TODO: is this ok???
+            tableView.deselectRow(at: indexPath, animated: true)
             navigationController?.pushViewController(viewController, animated: true)
         }
     }
