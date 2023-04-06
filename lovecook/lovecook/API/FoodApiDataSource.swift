@@ -41,21 +41,29 @@ class FoodApiDataSource {
                     let jsonDecoder = JSONDecoder()
                     if let error = error {
                         print(error)
-                        completion(nil)
+                        DispatchQueue.main.async {
+                            completion(nil)
+                        }
                         return
                     }
                     guard let data = data else {
                         print("data was nil")
-                        completion(nil)
+                        DispatchQueue.main.async {
+                            completion(nil)
+                        }
                         return
                     }
                     do {
                         let recipeResponse = try jsonDecoder.decode(RecipeResponse.self, from: data)
                         print("Decoding ok")
-                        completion(recipeResponse.meals)
+                        DispatchQueue.main.async {
+                            completion(recipeResponse.meals)
+                        }
                     } catch {
                         print(error)
-                        completion(nil)
+                        DispatchQueue.main.async {
+                            completion(nil)
+                        }
                     }
                 }.resume()
     }

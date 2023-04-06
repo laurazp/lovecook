@@ -20,13 +20,15 @@ class RecipesViewModel {
         
         //TODO: no seguir hasta que getRecipe haya terminado !!!!!!!
         
-        print("Selected recipe is:")
-        print(self.recipe)
-        if let selectedRecipe = self.recipe {
-            print("Recipe exists")
-            self.viewDelegate?.configureView(with: selectedRecipe)
-            //getRecipe(recipeId: recipe.idMeal)
-        }
+        //self.viewDelegate?.configureView(with: existingRecipe)
+
+//        print("Selected recipe is:")
+//        print(self.recipe)
+//        if let selectedRecipe = self.recipe {
+//            print("Recipe exists")
+//            self.viewDelegate?.configureView(with: selectedRecipe)
+//            //getRecipe(recipeId: recipe.idMeal)
+//        }
     }
     
     func getRecipe(recipeId: String) {
@@ -34,11 +36,19 @@ class RecipesViewModel {
         getMealsUseCase.getRecipe(url: url) { meals in
             self.recipeResult = meals ?? [Recipe]()
             self.recipe = meals?[0]
+            //self.viewDelegate?.updateView()
             if let existingRecipe = self.recipe {
                 print("Recipe ok")
                 print(self.recipe.customMirror.subjectType)
+                self.setSelectedRecipe(recipe: self.recipe!)
             }
         }
+    }
+    
+    private func setSelectedRecipe(recipe: Recipe) {
+        print("Selected recipe is:")
+        print(self.recipe)
+        self.viewDelegate?.configureView(with: recipe)
     }
     
     func setRecipe(recipeId: String) {
