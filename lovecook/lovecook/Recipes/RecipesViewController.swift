@@ -22,23 +22,21 @@ class RecipesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Vamos a llamar a viewModel viewDidLoad")
         viewModel.viewDidLoad()
         setupViews()
-        
+    }
+    
+    private func setupViews() {
         let contentRect: CGRect = recipesScrollView.subviews.reduce(into: .zero) { rect, view in
             rect = rect.union(view.frame)
         }
         recipesScrollView.contentSize = contentRect.size
-        
-    }
-    
-    private func setupViews() {
         detailsStackView.layoutMargins = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         detailsStackView.isLayoutMarginsRelativeArrangement = true
         recipesStackView.layoutMargins = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
         recipesStackView.isLayoutMarginsRelativeArrangement = true
         ingredientsCardView.layer.cornerRadius = 20
+        ingredientsCardView.layoutMargins = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         instructionsCardView.layer.cornerRadius = 20
         setupLabelsHeightInsideCardViews()
     }
@@ -58,15 +56,10 @@ class RecipesViewController: UIViewController {
     }
     
     private func configure(with detail: Recipe) {
-        //TODO: Set cardviews height to labels inside height
-        //ingredientsHeightConstraint.constant = recipeIngredientsLabel.frame.height
-        
-        
-        print("configuring...")
         let imageUrl = URL(string: detail.strMealThumb)!
         recipeImageView.load(url: imageUrl)
         recipeTitleLabel.text = detail.strMeal
-        print("Configuring cell: title = \(detail.strMeal)")
+        recipeTitleLabel.textColor = UIColor.darkGray
         recipeCategoryLabel.text = "Category: " + String(describing: detail.strCategory)
         recipeAreaLabel.text = "Area: " + String(describing: detail.strArea ?? "")
         measurementsLabel.text = configureMeasurementsText(detail: detail)
