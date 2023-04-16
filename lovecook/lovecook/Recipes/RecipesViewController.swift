@@ -6,6 +6,7 @@ class RecipesViewController: UIViewController {
     var viewModel = RecipesViewModel()
     var recipeId: String = ""
     
+    @IBOutlet weak var recipesStackView: UIStackView!
     @IBOutlet weak var recipeTitleLabel: UILabel!
     @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var recipeCategoryLabel: UILabel!
@@ -15,19 +16,41 @@ class RecipesViewController: UIViewController {
     @IBOutlet weak var ingredientsCardView: UIView!
     @IBOutlet weak var instructionsCardView: UIView!
     @IBOutlet weak var recipeIngredientsLabel: UILabel!
-    @IBOutlet weak var ingredientsHeightConstraint: NSLayoutConstraint!
+    //@IBOutlet weak var ingredientsHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var detailsStackView: UIStackView!
+    @IBOutlet weak var recipesScrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Vamos a llamar a viewModel viewDidLoad")
         viewModel.viewDidLoad()
-        setupLabels()
+        setupViews()
+        
+        let contentRect: CGRect = recipesScrollView.subviews.reduce(into: .zero) { rect, view in
+            rect = rect.union(view.frame)
+        }
+        recipesScrollView.contentSize = contentRect.size
+        
     }
     
-    private func setupLabels() {
-        recipeCategoryLabel.text = "Category: "
-        recipeAreaLabel.text = "Area: "
-        recipeImageView.backgroundColor = UIColor.customOrange()
+    private func setupViews() {
+        detailsStackView.layoutMargins = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        detailsStackView.isLayoutMarginsRelativeArrangement = true
+        recipesStackView.layoutMargins = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
+        recipesStackView.isLayoutMarginsRelativeArrangement = true
+        ingredientsCardView.layer.cornerRadius = 20
+        instructionsCardView.layer.cornerRadius = 20
+        setupLabelsHeightInsideCardViews()
+    }
+    
+    private func setupLabelsHeightInsideCardViews() {
+        recipeIngredientsLabel.translatesAutoresizingMaskIntoConstraints = false
+        recipeIngredientsLabel.setContentHuggingPriority(.required, for: .vertical)
+        recipeIngredientsLabel.setContentCompressionResistancePriority(.required, for: .vertical)
+        
+        recipeInstructionsLabel.translatesAutoresizingMaskIntoConstraints = false
+        recipeInstructionsLabel.setContentHuggingPriority(.required, for: .vertical)
+        recipeInstructionsLabel.setContentCompressionResistancePriority(.required, for: .vertical)
     }
     
     func configureView(with detail: Recipe) {
@@ -36,7 +59,7 @@ class RecipesViewController: UIViewController {
     
     private func configure(with detail: Recipe) {
         //TODO: Set cardviews height to labels inside height
-        ingredientsHeightConstraint.constant = recipeIngredientsLabel.frame.height
+        //ingredientsHeightConstraint.constant = recipeIngredientsLabel.frame.height
         
         
         print("configuring...")
@@ -50,13 +73,23 @@ class RecipesViewController: UIViewController {
         recipeIngredientsLabel.text = ingredientsText
         recipeInstructionsLabel.text = detail.strInstructions
         if detail.strTags != nil {
-            recipeTagsLabel.text = "Tags: " + String(describing: detail.strTags ?? "")
+            recipeTagsLabel.text = "Tags:  " + String(describing: detail.strTags ?? "")
         } else {
-            recipeTagsLabel.text = ""
+            recipeTagsLabel.text = "Tags:  nil"
         }
     }
     
     private func configureIngredientsText(detail: Recipe) -> String {
-        return (detail.strIngredient1 ?? "") + "\n" + (detail.strIngredient2 ?? "") + "\n" + (detail.strIngredient3 ?? "") + "\n" + (detail.strIngredient4 ?? "") + "\n" + (detail.strIngredient5 ?? "") + "\n" + (detail.strIngredient6 ?? "") + "\n" + (detail.strIngredient7 ?? "") + "\n" + (detail.strIngredient8 ?? "") + "\n" + (detail.strIngredient9 ?? "") + "\n" + (detail.strIngredient10 ?? "") + "\n" + (detail.strIngredient11 ?? "") + "\n" + (detail.strIngredient12 ?? "") + "\n" + (detail.strIngredient13 ?? "") + "\n" + (detail.strIngredient14 ?? "") + "\n" + (detail.strIngredient15 ?? "") + "\n" + (detail.strIngredient16 ?? "") + "\n" + (detail.strIngredient17 ?? "") + "\n" + (detail.strIngredient18 ?? "") + "\n" + (detail.strIngredient19 ?? "") + "\n" + (detail.strIngredient20 ?? "")
+        var existingIngredients: String = ""
+        let allIngredientsArray = [detail.strIngredient1, detail.strIngredient2, detail.strIngredient3, detail.strIngredient4, detail.strIngredient5, detail.strIngredient6, detail.strIngredient7, detail.strIngredient8, detail.strIngredient9, detail.strIngredient10, detail.strIngredient11, detail.strIngredient12, detail.strIngredient13, detail.strIngredient14, detail.strIngredient15, detail.strIngredient16,detail.strIngredient17, detail.strIngredient18, detail.strIngredient19, detail.strIngredient20]
+        
+        for ingredient in allIngredientsArray {
+            if ingredient != nil {
+                if ingredient != "" {
+                    existingIngredients += "\(ingredient!)\n"
+                }
+            }
+        }
+        return existingIngredients
     }
 }
