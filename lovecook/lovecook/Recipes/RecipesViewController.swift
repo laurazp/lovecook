@@ -15,8 +15,8 @@ class RecipesViewController: UIViewController {
     @IBOutlet weak var recipeTagsLabel: UILabel!
     @IBOutlet weak var ingredientsCardView: UIView!
     @IBOutlet weak var instructionsCardView: UIView!
+    @IBOutlet weak var measurementsLabel: UILabel!
     @IBOutlet weak var recipeIngredientsLabel: UILabel!
-    //@IBOutlet weak var ingredientsHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var detailsStackView: UIStackView!
     @IBOutlet weak var recipesScrollView: UIScrollView!
     
@@ -69,6 +69,7 @@ class RecipesViewController: UIViewController {
         print("Configuring cell: title = \(detail.strMeal)")
         recipeCategoryLabel.text = "Category: " + String(describing: detail.strCategory)
         recipeAreaLabel.text = "Area: " + String(describing: detail.strArea ?? "")
+        measurementsLabel.text = configureMeasurementsText(detail: detail)
         let ingredientsText = configureIngredientsText(detail: detail)
         recipeIngredientsLabel.text = ingredientsText
         recipeInstructionsLabel.text = detail.strInstructions
@@ -85,11 +86,25 @@ class RecipesViewController: UIViewController {
         
         for ingredient in allIngredientsArray {
             if ingredient != nil {
-                if ingredient != "" {
+                if ingredient != "" && ingredient != " " {
                     existingIngredients += "\(ingredient!)\n"
                 }
             }
         }
         return existingIngredients
+    }
+    
+    private func configureMeasurementsText(detail: Recipe) -> String {
+        var existingMeasurements: String = ""
+        let allMeasurementsArray = [detail.strMeasure1, detail.strMeasure2, detail.strMeasure3, detail.strMeasure4, detail.strMeasure5, detail.strMeasure6, detail.strMeasure7, detail.strMeasure8, detail.strMeasure9, detail.strMeasure10, detail.strMeasure11, detail.strMeasure12, detail.strMeasure13, detail.strMeasure14, detail.strMeasure15, detail.strMeasure16,detail.strMeasure17, detail.strMeasure18, detail.strMeasure19, detail.strMeasure20]
+        
+        for measure in allMeasurementsArray {
+            if measure != nil {
+                if measure != "" && measure != " " {
+                    existingMeasurements += "\(measure!)\n"
+                }
+            }
+        }
+        return existingMeasurements
     }
 }
