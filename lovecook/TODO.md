@@ -3,8 +3,8 @@
 
 ## Recipes
 
-### Altura de ingredientsCardView depende sólo de ingredientes existentes (no de los 20 posibles)
-###
+### Añadir Labels como título de Ingredients e Instructions
+### 
 
 
 ## Favorites

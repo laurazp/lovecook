@@ -62,9 +62,11 @@ class RecipesViewController: UIViewController {
         recipeTitleLabel.textColor = UIColor.darkGray
         recipeCategoryLabel.text = "Category: " + String(describing: detail.strCategory)
         recipeAreaLabel.text = "Area: " + String(describing: detail.strArea ?? "")
-        measurementsLabel.text = configureMeasurementsText(detail: detail)
-        let ingredientsText = configureIngredientsText(detail: detail)
-        recipeIngredientsLabel.text = ingredientsText
+        //measurementsLabel.text = configureMeasurementsText(detail: detail)
+        //let ingredientsText = configureIngredientsText(detail: detail)
+        //recipeIngredientsLabel.text = ingredientsText
+        let ingredientsText = configureIngredientsAndMeasurementsText(detail: detail)
+        recipeIngredientsLabel.attributedText = ingredientsText
         recipeInstructionsLabel.text = detail.strInstructions
         if detail.strTags != nil {
             recipeTagsLabel.text = "Tags:  " + String(describing: detail.strTags ?? "")
@@ -73,31 +75,57 @@ class RecipesViewController: UIViewController {
         }
     }
     
-    private func configureIngredientsText(detail: Recipe) -> String {
-        var existingIngredients: String = ""
-        let allIngredientsArray = [detail.strIngredient1, detail.strIngredient2, detail.strIngredient3, detail.strIngredient4, detail.strIngredient5, detail.strIngredient6, detail.strIngredient7, detail.strIngredient8, detail.strIngredient9, detail.strIngredient10, detail.strIngredient11, detail.strIngredient12, detail.strIngredient13, detail.strIngredient14, detail.strIngredient15, detail.strIngredient16,detail.strIngredient17, detail.strIngredient18, detail.strIngredient19, detail.strIngredient20]
+    private func configureIngredientsAndMeasurementsText(detail: Recipe) -> NSMutableAttributedString {
+        let ingredientsAttributedString = NSMutableAttributedString(string: "")
+        let boldAttributes = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 16)]
+        let normalAttributes = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 13)]
+        var isOdd: Bool = true
+
+        let allIngredientsAndMeasurementsArray = [detail.strIngredient1, detail.strMeasure1, detail.strIngredient2, detail.strMeasure2, detail.strIngredient3, detail.strMeasure3, detail.strIngredient4, detail.strMeasure4, detail.strIngredient5, detail.strMeasure5, detail.strIngredient6, detail.strMeasure6, detail.strIngredient7, detail.strMeasure7, detail.strIngredient8, detail.strMeasure8, detail.strIngredient9, detail.strMeasure9, detail.strIngredient10, detail.strMeasure10, detail.strIngredient11, detail.strMeasure11, detail.strIngredient12, detail.strMeasure12, detail.strIngredient13, detail.strMeasure13, detail.strIngredient14, detail.strMeasure14, detail.strIngredient15, detail.strMeasure15, detail.strIngredient16, detail.strMeasure16, detail.strIngredient17, detail.strMeasure17, detail.strIngredient18, detail.strMeasure18, detail.strIngredient19, detail.strMeasure19, detail.strIngredient20, detail.strMeasure20]
         
-        for ingredient in allIngredientsArray {
+        for ingredient in allIngredientsAndMeasurementsArray {
             if ingredient != nil {
                 if ingredient != "" && ingredient != " " {
-                    existingIngredients += "\(ingredient!)\n"
+                    if isOdd {
+                        let boldIngredient = NSMutableAttributedString(string: "\(String(describing: ingredient!)) ", attributes: boldAttributes)
+                        ingredientsAttributedString.append(boldIngredient)
+                        isOdd = false
+                    } else {
+                        let measurement = NSMutableAttributedString(string: "- \(ingredient!)\n", attributes: normalAttributes)
+                        ingredientsAttributedString.append(measurement)
+                        isOdd = true
+                    }
                 }
             }
         }
-        return existingIngredients
+        return ingredientsAttributedString
     }
     
-    private func configureMeasurementsText(detail: Recipe) -> String {
-        var existingMeasurements: String = ""
-        let allMeasurementsArray = [detail.strMeasure1, detail.strMeasure2, detail.strMeasure3, detail.strMeasure4, detail.strMeasure5, detail.strMeasure6, detail.strMeasure7, detail.strMeasure8, detail.strMeasure9, detail.strMeasure10, detail.strMeasure11, detail.strMeasure12, detail.strMeasure13, detail.strMeasure14, detail.strMeasure15, detail.strMeasure16,detail.strMeasure17, detail.strMeasure18, detail.strMeasure19, detail.strMeasure20]
-        
-        for measure in allMeasurementsArray {
-            if measure != nil {
-                if measure != "" && measure != " " {
-                    existingMeasurements += "\(measure!)\n"
-                }
-            }
-        }
-        return existingMeasurements
-    }
+//    private func configureIngredientsText(detail: Recipe) -> String {
+//        var existingIngredients: String = ""
+//        let allIngredientsArray = [detail.strIngredient1, detail.strIngredient2, detail.strIngredient3, detail.strIngredient4, detail.strIngredient5, detail.strIngredient6, detail.strIngredient7, detail.strIngredient8, detail.strIngredient9, detail.strIngredient10, detail.strIngredient11, detail.strIngredient12, detail.strIngredient13, detail.strIngredient14, detail.strIngredient15, detail.strIngredient16,detail.strIngredient17, detail.strIngredient18, detail.strIngredient19, detail.strIngredient20]
+//
+//        for ingredient in allIngredientsArray {
+//            if ingredient != nil {
+//                if ingredient != "" && ingredient != " " {
+//                    existingIngredients += "\(ingredient!)\n"
+//                }
+//            }
+//        }
+//        return existingIngredients
+//    }
+//
+//    private func configureMeasurementsText(detail: Recipe) -> String {
+//        var existingMeasurements: String = ""
+//        let allMeasurementsArray = [detail.strMeasure1, detail.strMeasure2, detail.strMeasure3, detail.strMeasure4, detail.strMeasure5, detail.strMeasure6, detail.strMeasure7, detail.strMeasure8, detail.strMeasure9, detail.strMeasure10, detail.strMeasure11, detail.strMeasure12, detail.strMeasure13, detail.strMeasure14, detail.strMeasure15, detail.strMeasure16,detail.strMeasure17, detail.strMeasure18, detail.strMeasure19, detail.strMeasure20]
+//
+//        for measure in allMeasurementsArray {
+//            if measure != nil {
+//                if measure != "" && measure != " " {
+//                    existingMeasurements += "\(measure!)\n"
+//                }
+//            }
+//        }
+//        return existingMeasurements
+//    }
 }
