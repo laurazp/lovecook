@@ -20,6 +20,22 @@ class FoodApiDataSource {
         }.resume()
     }
     
+    func getRecipesByAreaData(url: URL, completion: @escaping ([Meal]?)-> ()) {
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print("Failed to convert \(error)")
+                //TODO: Show error message in TableView ??
+                completion(nil)
+            } else if let data = data {
+                let recipesResponse = try?  JSONDecoder().decode(MealResponse.self, from: data)
+                if let recipesResponse = recipesResponse {
+                    completion(recipesResponse.meals)
+                }
+            }
+        }.resume()
+    }
+    
     func filterByCategory(url: URL, completion: @escaping ([Meal]?)-> ()) {
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
