@@ -74,9 +74,32 @@ extension MealsByCategoryViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MealsCell", for: indexPath) as? MealsCell else { return UITableViewCell() }
         
+        //Action when favoritesButton is tapped
+        cell.favoritesButtonSelectedAction = { [unowned self] in
+            let favoriteRecipe = viewModel.getMeal(at: indexPath.row)
+            //TODO: add recipe to favorites
+            viewModel.addMealToFavorites(favoriteMeal: favoriteRecipe)
+            
+            let alert = UIAlertController(title: "Favorite added!", message: "\(favoriteRecipe.strMeal) added to Favorites", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        cell.favoritesButtonDeselectedAction = { [unowned self] in
+            let favoriteRecipe = viewModel.getMeal(at: indexPath.row)
+            //TODO: delete recipe from favorites
+            
+            let alert = UIAlertController(title: "Favorite deleted", message: "\(favoriteRecipe.strMeal) deleted from Favorites", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
+        }
+        
         configureCell(cell: cell, indexPath: indexPath)
         cell.indexPath = indexPath
         //cell.delegate = self
+         
         return cell
     }
     
@@ -85,7 +108,6 @@ extension MealsByCategoryViewController: UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         let storyboard = UIStoryboard(name: "RecipesStoryboard", bundle: nil)
         if let viewController = storyboard.instantiateViewController(withIdentifier: "RecipesViewController") as? RecipesViewController {
             

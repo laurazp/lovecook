@@ -7,6 +7,8 @@ class MealsCell: UITableViewCell {
     @IBOutlet weak var mealImageView: UIImageView!
     @IBOutlet weak var favoritesButton: UIButton!
     
+    var favoritesButtonSelectedAction : (() -> ())?
+    var favoritesButtonDeselectedAction : (() -> ())?
     var indexPath: IndexPath = IndexPath()
     
     override func awakeFromNib() {
@@ -30,9 +32,10 @@ class MealsCell: UITableViewCell {
     @IBAction func favoriteButtonTapped(_ sender: UIButton) {
         if favoritesButton.isSelected == true {
             favoritesButton.isSelected = false
-          }else {
+            favoritesButtonDeselectedAction?()
+          } else {
               favoritesButton.isSelected = true
-              //TODO: save recipe in user's Favorites
+              favoritesButtonSelectedAction?()
           }
     }
 }

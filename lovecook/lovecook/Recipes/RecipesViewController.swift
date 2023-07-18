@@ -1,10 +1,15 @@
 
 import UIKit
+import CoreData
 
 class RecipesViewController: UIViewController {
 
     var viewModel = RecipesViewModel()
+    private let getMealsUseCase = GetMealsUseCase()
     var recipeId: String = ""
+    //@IBOutlet weak var favoriteButton: UIButton!
+    var favoritesButtonSelectedAction : (() -> ())?
+    var favoritesButtonDeselectedAction : (() -> ())?
     
     @IBOutlet weak var recipesStackView: UIStackView!
     @IBOutlet weak var recipeTitleLabel: UILabel!
@@ -39,7 +44,58 @@ class RecipesViewController: UIViewController {
         instructionsCardView.layer.cornerRadius = 20
         instructionsCardView.layoutMargins = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         setupLabelsHeightInsideCardViews()
+        setupAddFavoritesButton()
     }
+    
+    private func setupAddFavoritesButton() {
+//        let isFavorite = recipe.isFavorite ?? false
+//        let buttonImage = isFavorite ? UIImage(named: "heart.fill") : UIImage(named: "heart")
+//        favoriteButton.setImage(buttonImage, for: .normal)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "heart"), style: .done, target: self, action: #selector(favoriteButtonTapped))
+        navigationItem.rightBarButtonItem?.tintColor = UIColor.systemBlue
+                
+        //favoritesButton.setImage(UIImage(systemName: "heart"), for: [])
+        //favoritesButton.setImage(UIImage(systemName: "heart.fill"), for: UIControl.State.selected)
+        //favoritesButton.addTarget(self, action: #selector(favoriteButtonTapped), for: UIControl.Event.touchUpInside)
+    }
+    
+    @IBAction func favoriteButtonTapped(_ sender: UIButton) {
+        if navigationItem.rightBarButtonItem?.isSelected == true {
+            navigationItem.rightBarButtonItem?.isSelected = false
+            navigationItem.rightBarButtonItem?.image = UIImage(systemName: "heart")
+            favoritesButtonDeselectedAction?()
+            if let selectedRecipe = viewModel.recipe {
+                //getRecipeAndPutIntoFavs(recipe: selectedRecipe)
+            }
+          } else {
+              navigationItem.rightBarButtonItem?.isSelected = true
+              navigationItem.rightBarButtonItem?.image = UIImage(systemName: "heart.fill")
+              favoritesButtonSelectedAction?()
+          }
+    }
+    
+//    func getRecipeAndPutIntoFavs(recipe: Recipe) {
+//        var favoriteMeal: Recipe
+//        //Call API
+//        let url = URL(string: "https://www.themealdb.com/api/json/v1/1/lookup.php?i=\(recipe.idMeal)")!
+//        //Get recipe from API using Meal id
+//        getMealsUseCase.getRecipe(url: url) { meals in
+//            favoriteMeal = (meals?[0])!
+//        }
+//        //Save recipe to CoreData as FavoriteRecipe
+////        favoriteRecipeCrudUseCase.addFavoriteRecipe(favoriteMeal) {_ in
+////            //Update user's Favorites list
+////            print("Meal added to Favorites")
+////        }
+//        //Save
+//        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//        let newItem = NSEntityDescription.insertNewObject(forEntityName: "FavoriteRecipe", into: context) as! FavoriteRecipe
+//        newItem.idMeal = favoriteMeal.idMeal
+//        newItem.strMeal = favoriteMeal.strMeal
+//        //newItem.isFavorite = favoriteMeal.isFavorite
+//        try! context.save()
+//    }
     
     private func setupLabelsHeightInsideCardViews() {
         recipeIngredientsLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -97,4 +153,22 @@ class RecipesViewController: UIViewController {
         }
         return ingredientsAttributedString
     }
+    
+//    @IBAction func toggleFavorite(_ sender: Any) {
+//            guard let product = product else { return }
+//
+//            // Toggle the favorite status
+//            product.isFavorite = !product.isFavorite
+//
+//            // Update the button image
+//            let buttonImage = product.isFavorite ? UIImage(named: "favorite_on") : UIImage(named: "favorite_off")
+//            favoriteButton.setImage(buttonImage, for: .normal)
+//
+//            // Save changes to CoreData
+//            do {
+//                try CoreDataStack.shared.context.save()
+//            } catch {
+//                print("Error saving context: \(error)")
+//            }
+//        }
 }
